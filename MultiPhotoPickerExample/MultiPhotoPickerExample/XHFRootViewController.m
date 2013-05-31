@@ -9,6 +9,7 @@
 #import "XHFRootViewController.h"
 #import "XHFPhotoPicker.h"
 #import "XHFDemoBar.h"
+#import "XHFComplexViewController.h"
 
 @interface XHFRootViewController ()
 
@@ -56,6 +57,12 @@
     
     _bar=[[XHFDemoBar alloc]init];
     [self.view addSubview:_bar];
+    
+    UIButton *advance=[UIButton buttonWithType:UIButtonTypeRoundedRect];
+    advance.frame=CGRectMake(200, 400, 100, 30);
+    [advance setTitle:@"进阶demo" forState:UIControlStateNormal];
+    [advance addTarget:self action:@selector(advanceClick) forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:advance];
 }
 
 -(void)btn1Click{
@@ -68,6 +75,11 @@
 
 -(void)btn3Click{
     [XHFPhotoPicker showWithType:USER_SELECT InitPhotos:self.photos ViewController:self ResultBlock:_resultBlock];
+}
+
+-(void)advanceClick{
+    XHFComplexViewController *c=[[XHFComplexViewController alloc]init];
+    [self presentViewController:c animated:YES completion:nil];
 }
 
 

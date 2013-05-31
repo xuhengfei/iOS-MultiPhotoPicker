@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E863DE6717586AB400234E5D /* XHFComplexViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E863DE6617586AB400234E5D /* XHFComplexViewController.m */; };
+		E863DE6B17586C5500234E5D /* XHFComplexBar.m in Sources */ = {isa = PBXBuildFile; fileRef = E863DE6A17586C5500234E5D /* XHFComplexBar.m */; };
+		E863DE7B175890FB00234E5D /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = E863DE79175890FB00234E5D /* InfoPlist.strings */; };
+		E863DE84175893B800234E5D /* MultiPhotoPicker in Resources */ = {isa = PBXBuildFile; fileRef = E863DE82175893B800234E5D /* MultiPhotoPicker */; };
 		E87360E91757387F007F7487 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E87360E81757387F007F7487 /* UIKit.framework */; };
 		E87360EB1757387F007F7487 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E87360EA1757387F007F7487 /* Foundation.framework */; };
 		E87360ED1757387F007F7487 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E87360EC1757387F007F7487 /* CoreGraphics.framework */; };
@@ -17,41 +21,21 @@
 		E87360FD1757387F007F7487 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E87360FC1757387F007F7487 /* Default@2x.png */; };
 		E87360FF1757387F007F7487 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E87360FE1757387F007F7487 /* Default-568h@2x.png */; };
 		E873610917573A3C007F7487 /* XHFRootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E873610817573A3C007F7487 /* XHFRootViewController.m */; };
-		E873611717573D5D007F7487 /* XHFAlbumViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E873610D17573D5D007F7487 /* XHFAlbumViewController.m */; };
-		E873611817573D5D007F7487 /* XHFCameraViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E873610F17573D5D007F7487 /* XHFCameraViewController.m */; };
-		E873611917573D5D007F7487 /* XHFPhotoPicker.m in Sources */ = {isa = PBXBuildFile; fileRef = E873611217573D5D007F7487 /* XHFPhotoPicker.m */; };
-		E873611A17573D5D007F7487 /* XHFSelectPhoto.m in Sources */ = {isa = PBXBuildFile; fileRef = E873611417573D5D007F7487 /* XHFSelectPhoto.m */; };
-		E873611B17573D5D007F7487 /* XHFThumbnailBar.m in Sources */ = {isa = PBXBuildFile; fileRef = E873611617573D5D007F7487 /* XHFThumbnailBar.m */; };
 		E873611D17573F25007F7487 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E873611C17573F25007F7487 /* AVFoundation.framework */; };
 		E873611F17573F2C007F7487 /* AssetsLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E873611E17573F2C007F7487 /* AssetsLibrary.framework */; };
 		E873612217574360007F7487 /* XHFDemoBar.m in Sources */ = {isa = PBXBuildFile; fileRef = E873612117574360007F7487 /* XHFDemoBar.m */; };
-		E873613817574E86007F7487 /* camera_back_btn_highlight.png in Resources */ = {isa = PBXBuildFile; fileRef = E873612417574E86007F7487 /* camera_back_btn_highlight.png */; };
-		E873613917574E86007F7487 /* camera_back_btn_highlight@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E873612517574E86007F7487 /* camera_back_btn_highlight@2x.png */; };
-		E873613A17574E86007F7487 /* camera_back_btn.png in Resources */ = {isa = PBXBuildFile; fileRef = E873612617574E86007F7487 /* camera_back_btn.png */; };
-		E873613B17574E86007F7487 /* camera_back_btn@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E873612717574E86007F7487 /* camera_back_btn@2x.png */; };
-		E873613C17574E86007F7487 /* camera_barcode_btn.png in Resources */ = {isa = PBXBuildFile; fileRef = E873612817574E86007F7487 /* camera_barcode_btn.png */; };
-		E873613D17574E86007F7487 /* camera_barcode_btn@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E873612917574E86007F7487 /* camera_barcode_btn@2x.png */; };
-		E873613E17574E86007F7487 /* camera_btn_highlight.png in Resources */ = {isa = PBXBuildFile; fileRef = E873612A17574E86007F7487 /* camera_btn_highlight.png */; };
-		E873613F17574E86007F7487 /* camera_btn_highlight@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E873612B17574E86007F7487 /* camera_btn_highlight@2x.png */; };
-		E873614017574E86007F7487 /* camera_btn.png in Resources */ = {isa = PBXBuildFile; fileRef = E873612C17574E86007F7487 /* camera_btn.png */; };
-		E873614117574E86007F7487 /* camera_btn@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E873612D17574E86007F7487 /* camera_btn@2x.png */; };
-		E873614217574E86007F7487 /* camera_flash_off.png in Resources */ = {isa = PBXBuildFile; fileRef = E873612E17574E86007F7487 /* camera_flash_off.png */; };
-		E873614317574E86007F7487 /* camera_flash_off@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E873612F17574E86007F7487 /* camera_flash_off@2x.png */; };
-		E873614417574E86007F7487 /* camera_flash_on.png in Resources */ = {isa = PBXBuildFile; fileRef = E873613017574E86007F7487 /* camera_flash_on.png */; };
-		E873614517574E86007F7487 /* camera_flash_on@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E873613117574E86007F7487 /* camera_flash_on@2x.png */; };
-		E873614617574E86007F7487 /* camera_ok_btn_highlight.png in Resources */ = {isa = PBXBuildFile; fileRef = E873613217574E86007F7487 /* camera_ok_btn_highlight.png */; };
-		E873614717574E86007F7487 /* camera_ok_btn_highlight@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E873613317574E86007F7487 /* camera_ok_btn_highlight@2x.png */; };
-		E873614817574E86007F7487 /* camera_ok_btn.png in Resources */ = {isa = PBXBuildFile; fileRef = E873613417574E86007F7487 /* camera_ok_btn.png */; };
-		E873614917574E86007F7487 /* camera_ok_btn@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E873613517574E86007F7487 /* camera_ok_btn@2x.png */; };
-		E873614A17574E86007F7487 /* camera_toolBar_bg.png in Resources */ = {isa = PBXBuildFile; fileRef = E873613617574E86007F7487 /* camera_toolBar_bg.png */; };
-		E873614B17574E86007F7487 /* camera_toolBar_bg@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E873613717574E86007F7487 /* camera_toolBar_bg@2x.png */; };
-		E873615017574F3B007F7487 /* album_btn_highlight.png in Resources */ = {isa = PBXBuildFile; fileRef = E873614C17574F3B007F7487 /* album_btn_highlight.png */; };
-		E873615117574F3B007F7487 /* album_btn_highlight@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E873614D17574F3B007F7487 /* album_btn_highlight@2x.png */; };
-		E873615217574F3B007F7487 /* album_btn.png in Resources */ = {isa = PBXBuildFile; fileRef = E873614E17574F3B007F7487 /* album_btn.png */; };
-		E873615317574F3B007F7487 /* album_btn@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E873614F17574F3B007F7487 /* album_btn@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		E863DE6517586AB400234E5D /* XHFComplexViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHFComplexViewController.h; sourceTree = "<group>"; };
+		E863DE6617586AB400234E5D /* XHFComplexViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHFComplexViewController.m; sourceTree = "<group>"; };
+		E863DE6917586C5500234E5D /* XHFComplexBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHFComplexBar.h; sourceTree = "<group>"; };
+		E863DE6A17586C5500234E5D /* XHFComplexBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHFComplexBar.m; sourceTree = "<group>"; };
+		E863DE75175890FB00234E5D /* MultiPhotoPicker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MultiPhotoPicker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E863DE78175890FB00234E5D /* MultiPhotoPicker-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "MultiPhotoPicker-Info.plist"; sourceTree = "<group>"; };
+		E863DE7A175890FB00234E5D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		E863DE7C175890FB00234E5D /* MultiPhotoPicker-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MultiPhotoPicker-Prefix.pch"; sourceTree = "<group>"; };
+		E863DE82175893B800234E5D /* MultiPhotoPicker */ = {isa = PBXFileReference; lastKnownFileType = folder; name = MultiPhotoPicker; path = ../MultiPhotoPicker; sourceTree = "<group>"; };
 		E87360E51757387F007F7487 /* MultiPhotoPickerExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MultiPhotoPickerExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E87360E81757387F007F7487 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		E87360EA1757387F007F7487 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -67,48 +51,20 @@
 		E87360FE1757387F007F7487 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		E873610717573A3C007F7487 /* XHFRootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHFRootViewController.h; sourceTree = "<group>"; };
 		E873610817573A3C007F7487 /* XHFRootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHFRootViewController.m; sourceTree = "<group>"; };
-		E873610C17573D5D007F7487 /* XHFAlbumViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHFAlbumViewController.h; sourceTree = "<group>"; };
-		E873610D17573D5D007F7487 /* XHFAlbumViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHFAlbumViewController.m; sourceTree = "<group>"; };
-		E873610E17573D5D007F7487 /* XHFCameraViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHFCameraViewController.h; sourceTree = "<group>"; };
-		E873610F17573D5D007F7487 /* XHFCameraViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHFCameraViewController.m; sourceTree = "<group>"; };
-		E873611017573D5D007F7487 /* XHFDefine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHFDefine.h; sourceTree = "<group>"; };
-		E873611117573D5D007F7487 /* XHFPhotoPicker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHFPhotoPicker.h; sourceTree = "<group>"; };
-		E873611217573D5D007F7487 /* XHFPhotoPicker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHFPhotoPicker.m; sourceTree = "<group>"; };
-		E873611317573D5D007F7487 /* XHFSelectPhoto.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHFSelectPhoto.h; sourceTree = "<group>"; };
-		E873611417573D5D007F7487 /* XHFSelectPhoto.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHFSelectPhoto.m; sourceTree = "<group>"; };
-		E873611517573D5D007F7487 /* XHFThumbnailBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHFThumbnailBar.h; sourceTree = "<group>"; };
-		E873611617573D5D007F7487 /* XHFThumbnailBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHFThumbnailBar.m; sourceTree = "<group>"; };
 		E873611C17573F25007F7487 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		E873611E17573F2C007F7487 /* AssetsLibrary.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AssetsLibrary.framework; path = System/Library/Frameworks/AssetsLibrary.framework; sourceTree = SDKROOT; };
 		E873612017574360007F7487 /* XHFDemoBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHFDemoBar.h; sourceTree = "<group>"; };
 		E873612117574360007F7487 /* XHFDemoBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHFDemoBar.m; sourceTree = "<group>"; };
-		E873612417574E86007F7487 /* camera_back_btn_highlight.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = camera_back_btn_highlight.png; path = resources/camera_back_btn_highlight.png; sourceTree = "<group>"; };
-		E873612517574E86007F7487 /* camera_back_btn_highlight@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "camera_back_btn_highlight@2x.png"; path = "resources/camera_back_btn_highlight@2x.png"; sourceTree = "<group>"; };
-		E873612617574E86007F7487 /* camera_back_btn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = camera_back_btn.png; path = resources/camera_back_btn.png; sourceTree = "<group>"; };
-		E873612717574E86007F7487 /* camera_back_btn@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "camera_back_btn@2x.png"; path = "resources/camera_back_btn@2x.png"; sourceTree = "<group>"; };
-		E873612817574E86007F7487 /* camera_barcode_btn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = camera_barcode_btn.png; path = resources/camera_barcode_btn.png; sourceTree = "<group>"; };
-		E873612917574E86007F7487 /* camera_barcode_btn@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "camera_barcode_btn@2x.png"; path = "resources/camera_barcode_btn@2x.png"; sourceTree = "<group>"; };
-		E873612A17574E86007F7487 /* camera_btn_highlight.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = camera_btn_highlight.png; path = resources/camera_btn_highlight.png; sourceTree = "<group>"; };
-		E873612B17574E86007F7487 /* camera_btn_highlight@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "camera_btn_highlight@2x.png"; path = "resources/camera_btn_highlight@2x.png"; sourceTree = "<group>"; };
-		E873612C17574E86007F7487 /* camera_btn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = camera_btn.png; path = resources/camera_btn.png; sourceTree = "<group>"; };
-		E873612D17574E86007F7487 /* camera_btn@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "camera_btn@2x.png"; path = "resources/camera_btn@2x.png"; sourceTree = "<group>"; };
-		E873612E17574E86007F7487 /* camera_flash_off.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = camera_flash_off.png; path = resources/camera_flash_off.png; sourceTree = "<group>"; };
-		E873612F17574E86007F7487 /* camera_flash_off@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "camera_flash_off@2x.png"; path = "resources/camera_flash_off@2x.png"; sourceTree = "<group>"; };
-		E873613017574E86007F7487 /* camera_flash_on.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = camera_flash_on.png; path = resources/camera_flash_on.png; sourceTree = "<group>"; };
-		E873613117574E86007F7487 /* camera_flash_on@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "camera_flash_on@2x.png"; path = "resources/camera_flash_on@2x.png"; sourceTree = "<group>"; };
-		E873613217574E86007F7487 /* camera_ok_btn_highlight.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = camera_ok_btn_highlight.png; path = resources/camera_ok_btn_highlight.png; sourceTree = "<group>"; };
-		E873613317574E86007F7487 /* camera_ok_btn_highlight@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "camera_ok_btn_highlight@2x.png"; path = "resources/camera_ok_btn_highlight@2x.png"; sourceTree = "<group>"; };
-		E873613417574E86007F7487 /* camera_ok_btn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = camera_ok_btn.png; path = resources/camera_ok_btn.png; sourceTree = "<group>"; };
-		E873613517574E86007F7487 /* camera_ok_btn@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "camera_ok_btn@2x.png"; path = "resources/camera_ok_btn@2x.png"; sourceTree = "<group>"; };
-		E873613617574E86007F7487 /* camera_toolBar_bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = camera_toolBar_bg.png; path = resources/camera_toolBar_bg.png; sourceTree = "<group>"; };
-		E873613717574E86007F7487 /* camera_toolBar_bg@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "camera_toolBar_bg@2x.png"; path = "resources/camera_toolBar_bg@2x.png"; sourceTree = "<group>"; };
-		E873614C17574F3B007F7487 /* album_btn_highlight.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = album_btn_highlight.png; path = resources/album_btn_highlight.png; sourceTree = "<group>"; };
-		E873614D17574F3B007F7487 /* album_btn_highlight@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "album_btn_highlight@2x.png"; path = "resources/album_btn_highlight@2x.png"; sourceTree = "<group>"; };
-		E873614E17574F3B007F7487 /* album_btn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = album_btn.png; path = resources/album_btn.png; sourceTree = "<group>"; };
-		E873614F17574F3B007F7487 /* album_btn@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "album_btn@2x.png"; path = "resources/album_btn@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		E863DE6F175890FB00234E5D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		E87360E21757387F007F7487 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -124,11 +80,41 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E863DE6417586A8A00234E5D /* complex */ = {
+			isa = PBXGroup;
+			children = (
+				E863DE6517586AB400234E5D /* XHFComplexViewController.h */,
+				E863DE6617586AB400234E5D /* XHFComplexViewController.m */,
+				E863DE6917586C5500234E5D /* XHFComplexBar.h */,
+				E863DE6A17586C5500234E5D /* XHFComplexBar.m */,
+			);
+			name = complex;
+			sourceTree = "<group>";
+		};
+		E863DE76175890FB00234E5D /* MultiPhotoPicker */ = {
+			isa = PBXGroup;
+			children = (
+				E863DE77175890FB00234E5D /* Supporting Files */,
+			);
+			path = MultiPhotoPicker;
+			sourceTree = "<group>";
+		};
+		E863DE77175890FB00234E5D /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				E863DE78175890FB00234E5D /* MultiPhotoPicker-Info.plist */,
+				E863DE79175890FB00234E5D /* InfoPlist.strings */,
+				E863DE7C175890FB00234E5D /* MultiPhotoPicker-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
 		E87360DC1757387F007F7487 = {
 			isa = PBXGroup;
 			children = (
-				E873610B17573D5D007F7487 /* MultiPhotoPicker */,
+				E863DE82175893B800234E5D /* MultiPhotoPicker */,
 				E87360EE1757387F007F7487 /* MultiPhotoPickerExample */,
+				E863DE76175890FB00234E5D /* MultiPhotoPicker */,
 				E87360E71757387F007F7487 /* Frameworks */,
 				E87360E61757387F007F7487 /* Products */,
 			);
@@ -138,6 +124,7 @@
 			isa = PBXGroup;
 			children = (
 				E87360E51757387F007F7487 /* MultiPhotoPickerExample.app */,
+				E863DE75175890FB00234E5D /* MultiPhotoPicker.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -157,6 +144,7 @@
 		E87360EE1757387F007F7487 /* MultiPhotoPickerExample */ = {
 			isa = PBXGroup;
 			children = (
+				E863DE6417586A8A00234E5D /* complex */,
 				E87360F71757387F007F7487 /* XHFAppDelegate.h */,
 				E87360F81757387F007F7487 /* XHFAppDelegate.m */,
 				E873610717573A3C007F7487 /* XHFRootViewController.h */,
@@ -182,60 +170,40 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		E873610B17573D5D007F7487 /* MultiPhotoPicker */ = {
-			isa = PBXGroup;
-			children = (
-				E873612317574E7B007F7487 /* resources */,
-				E873610C17573D5D007F7487 /* XHFAlbumViewController.h */,
-				E873610D17573D5D007F7487 /* XHFAlbumViewController.m */,
-				E873610E17573D5D007F7487 /* XHFCameraViewController.h */,
-				E873610F17573D5D007F7487 /* XHFCameraViewController.m */,
-				E873611017573D5D007F7487 /* XHFDefine.h */,
-				E873611117573D5D007F7487 /* XHFPhotoPicker.h */,
-				E873611217573D5D007F7487 /* XHFPhotoPicker.m */,
-				E873611317573D5D007F7487 /* XHFSelectPhoto.h */,
-				E873611417573D5D007F7487 /* XHFSelectPhoto.m */,
-				E873611517573D5D007F7487 /* XHFThumbnailBar.h */,
-				E873611617573D5D007F7487 /* XHFThumbnailBar.m */,
-			);
-			name = MultiPhotoPicker;
-			path = ../MultiPhotoPicker;
-			sourceTree = "<group>";
-		};
-		E873612317574E7B007F7487 /* resources */ = {
-			isa = PBXGroup;
-			children = (
-				E873614C17574F3B007F7487 /* album_btn_highlight.png */,
-				E873614D17574F3B007F7487 /* album_btn_highlight@2x.png */,
-				E873614E17574F3B007F7487 /* album_btn.png */,
-				E873614F17574F3B007F7487 /* album_btn@2x.png */,
-				E873612417574E86007F7487 /* camera_back_btn_highlight.png */,
-				E873612517574E86007F7487 /* camera_back_btn_highlight@2x.png */,
-				E873612617574E86007F7487 /* camera_back_btn.png */,
-				E873612717574E86007F7487 /* camera_back_btn@2x.png */,
-				E873612817574E86007F7487 /* camera_barcode_btn.png */,
-				E873612917574E86007F7487 /* camera_barcode_btn@2x.png */,
-				E873612A17574E86007F7487 /* camera_btn_highlight.png */,
-				E873612B17574E86007F7487 /* camera_btn_highlight@2x.png */,
-				E873612C17574E86007F7487 /* camera_btn.png */,
-				E873612D17574E86007F7487 /* camera_btn@2x.png */,
-				E873612E17574E86007F7487 /* camera_flash_off.png */,
-				E873612F17574E86007F7487 /* camera_flash_off@2x.png */,
-				E873613017574E86007F7487 /* camera_flash_on.png */,
-				E873613117574E86007F7487 /* camera_flash_on@2x.png */,
-				E873613217574E86007F7487 /* camera_ok_btn_highlight.png */,
-				E873613317574E86007F7487 /* camera_ok_btn_highlight@2x.png */,
-				E873613417574E86007F7487 /* camera_ok_btn.png */,
-				E873613517574E86007F7487 /* camera_ok_btn@2x.png */,
-				E873613617574E86007F7487 /* camera_toolBar_bg.png */,
-				E873613717574E86007F7487 /* camera_toolBar_bg@2x.png */,
-			);
-			name = resources;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
+/* Begin PBXHeadersBuildPhase section */
+		E863DE70175890FB00234E5D /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
 /* Begin PBXNativeTarget section */
+		E863DE74175890FB00234E5D /* MultiPhotoPicker */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E863DE7D175890FB00234E5D /* Build configuration list for PBXNativeTarget "MultiPhotoPicker" */;
+			buildPhases = (
+				E863DE6D175890FB00234E5D /* ShellScript */,
+				E863DE6E175890FB00234E5D /* Sources */,
+				E863DE6F175890FB00234E5D /* Frameworks */,
+				E863DE70175890FB00234E5D /* Headers */,
+				E863DE71175890FB00234E5D /* Resources */,
+				E863DE72175890FB00234E5D /* ShellScript */,
+				E863DE73175890FB00234E5D /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MultiPhotoPicker;
+			productName = MultiPhotoPicker;
+			productReference = E863DE75175890FB00234E5D /* MultiPhotoPicker.framework */;
+			productType = "com.apple.product-type.bundle";
+		};
 		E87360E41757387F007F7487 /* MultiPhotoPickerExample */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = E87361021757387F007F7487 /* Build configuration list for PBXNativeTarget "MultiPhotoPickerExample" */;
@@ -276,11 +244,21 @@
 			projectRoot = "";
 			targets = (
 				E87360E41757387F007F7487 /* MultiPhotoPickerExample */,
+				E863DE74175890FB00234E5D /* MultiPhotoPicker */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		E863DE71175890FB00234E5D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E863DE7B175890FB00234E5D /* InfoPlist.strings in Resources */,
+				E863DE84175893B800234E5D /* MultiPhotoPicker in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		E87360E31757387F007F7487 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -289,36 +267,61 @@
 				E87360FB1757387F007F7487 /* Default.png in Resources */,
 				E87360FD1757387F007F7487 /* Default@2x.png in Resources */,
 				E87360FF1757387F007F7487 /* Default-568h@2x.png in Resources */,
-				E873613817574E86007F7487 /* camera_back_btn_highlight.png in Resources */,
-				E873613917574E86007F7487 /* camera_back_btn_highlight@2x.png in Resources */,
-				E873613A17574E86007F7487 /* camera_back_btn.png in Resources */,
-				E873613B17574E86007F7487 /* camera_back_btn@2x.png in Resources */,
-				E873613C17574E86007F7487 /* camera_barcode_btn.png in Resources */,
-				E873613D17574E86007F7487 /* camera_barcode_btn@2x.png in Resources */,
-				E873613E17574E86007F7487 /* camera_btn_highlight.png in Resources */,
-				E873613F17574E86007F7487 /* camera_btn_highlight@2x.png in Resources */,
-				E873614017574E86007F7487 /* camera_btn.png in Resources */,
-				E873614117574E86007F7487 /* camera_btn@2x.png in Resources */,
-				E873614217574E86007F7487 /* camera_flash_off.png in Resources */,
-				E873614317574E86007F7487 /* camera_flash_off@2x.png in Resources */,
-				E873614417574E86007F7487 /* camera_flash_on.png in Resources */,
-				E873614517574E86007F7487 /* camera_flash_on@2x.png in Resources */,
-				E873614617574E86007F7487 /* camera_ok_btn_highlight.png in Resources */,
-				E873614717574E86007F7487 /* camera_ok_btn_highlight@2x.png in Resources */,
-				E873614817574E86007F7487 /* camera_ok_btn.png in Resources */,
-				E873614917574E86007F7487 /* camera_ok_btn@2x.png in Resources */,
-				E873614A17574E86007F7487 /* camera_toolBar_bg.png in Resources */,
-				E873614B17574E86007F7487 /* camera_toolBar_bg@2x.png in Resources */,
-				E873615017574F3B007F7487 /* album_btn_highlight.png in Resources */,
-				E873615117574F3B007F7487 /* album_btn_highlight@2x.png in Resources */,
-				E873615217574F3B007F7487 /* album_btn.png in Resources */,
-				E873615317574F3B007F7487 /* album_btn@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		E863DE6D175890FB00234E5D /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "set -e\n\nset +u\nif [[ $UFW_MASTER_SCRIPT_RUNNING ]]\nthen\n    # Nothing for the slave script to do\n    exit 0\nfi\nset -u\n\nif [[ \"$SDK_NAME\" =~ ([A-Za-z]+) ]]\nthen\n    UFW_SDK_PLATFORM=${BASH_REMATCH[1]}\nelse\n    echo \"Could not find platform name from SDK_NAME: $SDK_NAME\"\n    exit 1\nfi\n\nif [[ \"$SDK_NAME\" =~ ([0-9]+.*$) ]]\nthen\n\tUFW_SDK_VERSION=${BASH_REMATCH[1]}\nelse\n    echo \"Could not find sdk version  from SDK_NAME: $SDK_NAME\"\n    exit 1\nfi\n\nif [[ \"$UFW_SDK_PLATFORM\" = \"iphoneos\" ]]\nthen\n    UFW_OTHER_PLATFORM=iphonesimulator\nelse\n    UFW_OTHER_PLATFORM=iphoneos\nfi\n\nif [[ \"$BUILT_PRODUCTS_DIR\" =~ (.*)$UFW_SDK_PLATFORM$ ]]\nthen\n    UFW_OTHER_BUILT_PRODUCTS_DIR=\"${BASH_REMATCH[1]}${UFW_OTHER_PLATFORM}\"\nelse\n    echo \"Could not find $UFW_SDK_PLATFORM in $BUILT_PRODUCTS_DIR\"\n    exit 1\nfi\n\n\n# Short-circuit if all binaries are up to date\n\nif [[ -f \"${BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}\" ]] && \\\n   [[ -f \"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.embeddedframework/${EXECUTABLE_PATH}\" ]] && \\\n   [[ ! \"${BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}\" -nt \"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.embeddedframework/${EXECUTABLE_PATH}\" ]]\n   [[ -f \"${UFW_OTHER_BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}\" ]] && \\\n   [[ -f \"${UFW_OTHER_BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.embeddedframework/${EXECUTABLE_PATH}\" ]] && \\\n   [[ ! \"${UFW_OTHER_BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}\" -nt \"${UFW_OTHER_BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.embeddedframework/${EXECUTABLE_PATH}\" ]]\nthen\n    exit 0\nfi\n\n\n# Clean other platform if needed\n\nif [[ ! -f \"${BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}\" ]]\nthen\n\techo \"Platform \\\"$UFW_SDK_PLATFORM\\\" was cleaned recently. Cleaning \\\"$UFW_OTHER_PLATFORM\\\" as well\"\n\techo xcodebuild -project \"${PROJECT_FILE_PATH}\" -target \"${TARGET_NAME}\" -configuration \"${CONFIGURATION}\" -sdk ${UFW_OTHER_PLATFORM}${UFW_SDK_VERSION} BUILD_DIR=\"${BUILD_DIR}\" CONFIGURATION_TEMP_DIR=\"${PROJECT_TEMP_DIR}/${CONFIGURATION}-${UFW_OTHER_PLATFORM}\" clean\n\txcodebuild -project \"${PROJECT_FILE_PATH}\" -target \"${TARGET_NAME}\" -configuration \"${CONFIGURATION}\" -sdk ${UFW_OTHER_PLATFORM}${UFW_SDK_VERSION} BUILD_DIR=\"${BUILD_DIR}\" CONFIGURATION_TEMP_DIR=\"${PROJECT_TEMP_DIR}/${CONFIGURATION}-${UFW_OTHER_PLATFORM}\" clean\nfi\n\n\n# Make sure we are building from fresh binaries\n\nrm -rf \"${BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}\"\nrm -rf \"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.embeddedframework\"\nrm -rf \"${UFW_OTHER_BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}\"\nrm -rf \"${UFW_OTHER_BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.embeddedframework\"\n";
+		};
+		E863DE72175890FB00234E5D /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "HEADERS_ROOT=$SRCROOT/$PRODUCT_NAME\nFRAMEWORK_HEADERS_DIR=\"$BUILT_PRODUCTS_DIR/$WRAPPER_NAME/Versions/$FRAMEWORK_VERSION/Headers\"\n\n## only header files expected at this point\nPUBLIC_HEADERS=$(find $FRAMEWORK_HEADERS_DIR/. -not -type d 2> /dev/null | sed -e \"s@.*/@@g\")\n\nFIND_OPTS=\"\"\nfor PUBLIC_HEADER in $PUBLIC_HEADERS; do\n  if [ -n \"$FIND_OPTS\" ]; then\n    FIND_OPTS=\"$FIND_OPTS -o\"\n  fi\n  FIND_OPTS=\"$FIND_OPTS -name '$PUBLIC_HEADER'\"\ndone\n\nif [ -n \"$FIND_OPTS\" ]; then\n  for ORIG_HEADER in $(eval \"find $HEADERS_ROOT/. $FIND_OPTS\" 2> /dev/null | sed -e \"s@^$HEADERS_ROOT/./@@g\"); do\n    PUBLIC_HEADER=$(basename $ORIG_HEADER)\n    RELATIVE_PATH=$(dirname $ORIG_HEADER)\n    if [ -e $FRAMEWORK_HEADERS_DIR/$PUBLIC_HEADER ]; then\n      mkdir -p \"$FRAMEWORK_HEADERS_DIR/$RELATIVE_PATH\"\n      mv \"$FRAMEWORK_HEADERS_DIR/$PUBLIC_HEADER\" \"$FRAMEWORK_HEADERS_DIR/$RELATIVE_PATH/$PUBLIC_HEADER\"\n    fi\n  done\nfi\n";
+		};
+		E863DE73175890FB00234E5D /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "set -e\n\nset +u\nif [[ $UFW_MASTER_SCRIPT_RUNNING ]]\nthen\n    # Nothing for the slave script to do\n    exit 0\nfi\nset -u\nexport UFW_MASTER_SCRIPT_RUNNING=1\n\n\n# Functions\n\n## List files in the specified directory, storing to the specified array.\n#\n# @param $1 The path to list\n# @param $2 The name of the array to fill\n#\n##\nlist_files ()\n{\n    filelist=$(ls \"$1\")\n    while read line\n    do\n        eval \"$2[\\${#$2[*]}]=\\\"\\$line\\\"\"\n    done <<< \"$filelist\"\n}\n\n\n# Sanity check\n\nif [[ ! -f \"${BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}\" ]]\nthen\n    echo \"Framework target \\\"${TARGET_NAME}\\\" had no source files to build from. Make sure your source files have the correct target membership\"\n    exit 1\nfi\n\n\n# Gather information\n\nif [[ \"$SDK_NAME\" =~ ([A-Za-z]+) ]]\nthen\n    UFW_SDK_PLATFORM=${BASH_REMATCH[1]}\nelse\n    echo \"Could not find platform name from SDK_NAME: $SDK_NAME\"\n    exit 1\nfi\n\nif [[ \"$SDK_NAME\" =~ ([0-9]+.*$) ]]\nthen\n    UFW_SDK_VERSION=${BASH_REMATCH[1]}\nelse\n    echo \"Could not find sdk version from SDK_NAME: $SDK_NAME\"\n    exit 1\nfi\n\nif [[ \"$UFW_SDK_PLATFORM\" = \"iphoneos\" ]]\nthen\n    UFW_OTHER_PLATFORM=iphonesimulator\nelse\n    UFW_OTHER_PLATFORM=iphoneos\nfi\n\nif [[ \"$BUILT_PRODUCTS_DIR\" =~ (.*)$UFW_SDK_PLATFORM$ ]]\nthen\n    UFW_OTHER_BUILT_PRODUCTS_DIR=\"${BASH_REMATCH[1]}${UFW_OTHER_PLATFORM}\"\nelse\n    echo \"Could not find $UFW_SDK_PLATFORM in $BUILT_PRODUCTS_DIR\"\n    exit 1\nfi\n\n\n# Short-circuit if all binaries are up to date.\n# We already checked the other platform in the prerun script.\n\nif [[ -f \"${BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}\" ]] && [[ -f \"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.embeddedframework/${EXECUTABLE_PATH}\" ]] && [[ ! \"${BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}\" -nt \"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.embeddedframework/${EXECUTABLE_PATH}\" ]]\nthen\n    exit 0\nfi\n\n\n# Make sure the other platform gets built\n\necho \"Build other platform\"\n\necho xcodebuild -project \"${PROJECT_FILE_PATH}\" -target \"${TARGET_NAME}\" -configuration \"${CONFIGURATION}\" -sdk ${UFW_OTHER_PLATFORM}${UFW_SDK_VERSION} BUILD_DIR=\"${BUILD_DIR}\" CONFIGURATION_TEMP_DIR=\"${PROJECT_TEMP_DIR}/${CONFIGURATION}-${UFW_OTHER_PLATFORM}\" $ACTION\nxcodebuild -project \"${PROJECT_FILE_PATH}\" -target \"${TARGET_NAME}\" -configuration \"${CONFIGURATION}\" -sdk ${UFW_OTHER_PLATFORM}${UFW_SDK_VERSION} BUILD_DIR=\"${BUILD_DIR}\" CONFIGURATION_TEMP_DIR=\"${PROJECT_TEMP_DIR}/${CONFIGURATION}-${UFW_OTHER_PLATFORM}\" $ACTION\n\n\n# Build the fat static library binary\n\necho \"Create universal static library\"\n\necho \"$PLATFORM_DEVELOPER_BIN_DIR/libtool\" -static \"${BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}\" \"${UFW_OTHER_BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}\" -o \"${BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}.temp\"\n\"$PLATFORM_DEVELOPER_BIN_DIR/libtool\" -static \"${BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}\" \"${UFW_OTHER_BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}\" -o \"${BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}.temp\"\n\necho mv \"${BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}.temp\" \"${BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}\"\nmv \"${BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}.temp\" \"${BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}\"\n\n\n# Build framework structure\n\necho \"Build symlinks\"\n\necho ln -sfh $FRAMEWORK_VERSION \"${BUILT_PRODUCTS_DIR}/${WRAPPER_NAME}/Versions/Current\"\nln -sfh $FRAMEWORK_VERSION \"${BUILT_PRODUCTS_DIR}/${WRAPPER_NAME}/Versions/Current\"\necho ln -sfh Versions/Current/Headers \"${BUILT_PRODUCTS_DIR}/${WRAPPER_NAME}/Headers\"\nln -sfh Versions/Current/Headers \"${BUILT_PRODUCTS_DIR}/${WRAPPER_NAME}/Headers\"\necho ln -sfh Versions/Current/Resources \"${BUILT_PRODUCTS_DIR}/${WRAPPER_NAME}/Resources\"\nln -sfh Versions/Current/Resources \"${BUILT_PRODUCTS_DIR}/${WRAPPER_NAME}/Resources\"\necho ln -sfh \"Versions/Current/${EXECUTABLE_NAME}\" \"${BUILT_PRODUCTS_DIR}/${WRAPPER_NAME}/${EXECUTABLE_NAME}\"\nln -sfh \"Versions/Current/${EXECUTABLE_NAME}\" \"${BUILT_PRODUCTS_DIR}/${WRAPPER_NAME}/${EXECUTABLE_NAME}\"\n\n\n# Link to binary for unit tests\n\nmkdir -p \"${BUILT_PRODUCTS_DIR}/.fake_fw_testing.framework\"\nln -sfh \"../${WRAPPER_NAME}/${EXECUTABLE_NAME}\" \"${BUILT_PRODUCTS_DIR}/.fake_fw_testing.framework/.fake_fw_testing\"\n\n\n# Build embedded framework structure\n\necho \"Build Embedded Framework\"\n\necho rm -rf \"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.embeddedframework\"\nrm -rf \"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.embeddedframework\"\necho mkdir -p \"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.embeddedframework/Resources\"\nmkdir -p \"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.embeddedframework/Resources\"\necho cp -a \"${BUILT_PRODUCTS_DIR}/${WRAPPER_NAME}\" \"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.embeddedframework/\"\ncp -a \"${BUILT_PRODUCTS_DIR}/${WRAPPER_NAME}\" \"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.embeddedframework/\"\n\ndeclare -a UFW_FILE_LIST\nlist_files \"${BUILT_PRODUCTS_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}\" UFW_FILE_LIST\nfor filename in \"${UFW_FILE_LIST[@]}\"\ndo\n    if [[ \"${filename}\" != \"Info.plist\" ]] && [[ ! \"${filename}\" =~ .*\\.lproj$ ]]\n    then\n        echo ln -sfh \"../${WRAPPER_NAME}/Resources/${filename}\" \"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.embeddedframework/Resources/${filename}\"\n        ln -sfh \"../${WRAPPER_NAME}/Resources/${filename}\" \"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.embeddedframework/Resources/${filename}\"\n    fi\ndone\n\n\n# Replace other platform's framework with a copy of this one (so that both have the same universal binary)\n\necho \"Copy from $UFW_SDK_PLATFORM to $UFW_OTHER_PLATFORM\"\n\necho rm -rf \"${BUILD_DIR}/${CONFIGURATION}-${UFW_OTHER_PLATFORM}\"\nrm -rf \"${BUILD_DIR}/${CONFIGURATION}-${UFW_OTHER_PLATFORM}\"\necho cp -a \"${BUILD_DIR}/${CONFIGURATION}-${UFW_SDK_PLATFORM}\" \"${BUILD_DIR}/${CONFIGURATION}-${UFW_OTHER_PLATFORM}\"\ncp -a \"${BUILD_DIR}/${CONFIGURATION}-${UFW_SDK_PLATFORM}\" \"${BUILD_DIR}/${CONFIGURATION}-${UFW_OTHER_PLATFORM}\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
+		E863DE6E175890FB00234E5D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		E87360E11757387F007F7487 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -326,18 +329,23 @@
 				E87360F51757387F007F7487 /* main.m in Sources */,
 				E87360F91757387F007F7487 /* XHFAppDelegate.m in Sources */,
 				E873610917573A3C007F7487 /* XHFRootViewController.m in Sources */,
-				E873611717573D5D007F7487 /* XHFAlbumViewController.m in Sources */,
-				E873611817573D5D007F7487 /* XHFCameraViewController.m in Sources */,
-				E873611917573D5D007F7487 /* XHFPhotoPicker.m in Sources */,
-				E873611A17573D5D007F7487 /* XHFSelectPhoto.m in Sources */,
-				E873611B17573D5D007F7487 /* XHFThumbnailBar.m in Sources */,
 				E873612217574360007F7487 /* XHFDemoBar.m in Sources */,
+				E863DE6717586AB400234E5D /* XHFComplexViewController.m in Sources */,
+				E863DE6B17586C5500234E5D /* XHFComplexBar.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
+		E863DE79175890FB00234E5D /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E863DE7A175890FB00234E5D /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
 		E87360F11757387F007F7487 /* InfoPlist.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -349,6 +357,58 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		E863DE7E175890FB00234E5D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = (
+					armv6,
+					"$(ARCHS_STANDARD_32_BIT)",
+				);
+				CONTENTS_FOLDER_PATH = "$(WRAPPER_NAME)/Versions/$(FRAMEWORK_VERSION)";
+				DEAD_CODE_STRIPPING = NO;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				FRAMEWORK_VERSION = A;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "MultiPhotoPicker/MultiPhotoPicker-Prefix.pch";
+				INFOPLIST_FILE = "MultiPhotoPicker/MultiPhotoPicker-Info.plist";
+				INFOPLIST_PATH = "$(UNLOCALIZED_RESOURCES_FOLDER_PATH)/Info.plist";
+				INSTALL_PATH = "$(BUILT_PRODUCTS_DIR)";
+				LINK_WITH_STANDARD_LIBRARIES = NO;
+				MACH_O_TYPE = mh_object;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				UNLOCALIZED_RESOURCES_FOLDER_PATH = "$(CONTENTS_FOLDER_PATH)/Resources";
+				WRAPPER_EXTENSION = framework;
+			};
+			name = Debug;
+		};
+		E863DE7F175890FB00234E5D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = (
+					armv6,
+					"$(ARCHS_STANDARD_32_BIT)",
+				);
+				CONTENTS_FOLDER_PATH = "$(WRAPPER_NAME)/Versions/$(FRAMEWORK_VERSION)";
+				DEAD_CODE_STRIPPING = NO;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				FRAMEWORK_VERSION = A;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "MultiPhotoPicker/MultiPhotoPicker-Prefix.pch";
+				INFOPLIST_FILE = "MultiPhotoPicker/MultiPhotoPicker-Info.plist";
+				INFOPLIST_PATH = "$(UNLOCALIZED_RESOURCES_FOLDER_PATH)/Info.plist";
+				INSTALL_PATH = "$(BUILT_PRODUCTS_DIR)";
+				LINK_WITH_STANDARD_LIBRARIES = NO;
+				MACH_O_TYPE = mh_object;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				UNLOCALIZED_RESOURCES_FOLDER_PATH = "$(CONTENTS_FOLDER_PATH)/Resources";
+				WRAPPER_EXTENSION = framework;
+			};
+			name = Release;
+		};
 		E87361001757387F007F7487 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -432,6 +492,14 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		E863DE7D175890FB00234E5D /* Build configuration list for PBXNativeTarget "MultiPhotoPicker" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E863DE7E175890FB00234E5D /* Debug */,
+				E863DE7F175890FB00234E5D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
 		E87360E01757387F007F7487 /* Build configuration list for PBXProject "MultiPhotoPickerExample" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -448,6 +516,7 @@
 				E87361041757387F007F7487 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

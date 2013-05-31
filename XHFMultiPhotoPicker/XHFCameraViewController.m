@@ -6,7 +6,7 @@
 //  Copyright (c) 2013年 周方. All rights reserved.
 //
 
-#import "XHFDefine.h"
+
 #import "XHFCameraViewController.h"
 #import "XHFThumbnailBar.h"
 #import "XHFAlbumViewController.h"

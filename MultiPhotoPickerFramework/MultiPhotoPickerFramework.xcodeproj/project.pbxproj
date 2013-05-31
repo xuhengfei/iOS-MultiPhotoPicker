@@ -1,0 +1,490 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		E8EC8BFC1758D77600BAC0F8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E8CD48DA175896380060E4D4 /* Foundation.framework */; };
+		E8EC8C051758D77600BAC0F8 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = E8CD48DF175896380060E4D4 /* InfoPlist.strings */; };
+		E8EC8C6A1758E61400BAC0F8 /* AssetsLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E8EC8C681758E5E800BAC0F8 /* AssetsLibrary.framework */; };
+		E8EC8C6B1758E61800BAC0F8 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E8EC8C661758E5E100BAC0F8 /* AVFoundation.framework */; };
+		E8EC8C961758E80F00BAC0F8 /* album_btn.png in Resources */ = {isa = PBXBuildFile; fileRef = E8EC8C741758E80F00BAC0F8 /* album_btn.png */; };
+		E8EC8C971758E80F00BAC0F8 /* album_btn@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E8EC8C751758E80F00BAC0F8 /* album_btn@2x.png */; };
+		E8EC8C981758E80F00BAC0F8 /* album_btn_highlight.png in Resources */ = {isa = PBXBuildFile; fileRef = E8EC8C761758E80F00BAC0F8 /* album_btn_highlight.png */; };
+		E8EC8C991758E80F00BAC0F8 /* album_btn_highlight@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E8EC8C771758E80F00BAC0F8 /* album_btn_highlight@2x.png */; };
+		E8EC8C9A1758E80F00BAC0F8 /* camera_back_btn.png in Resources */ = {isa = PBXBuildFile; fileRef = E8EC8C781758E80F00BAC0F8 /* camera_back_btn.png */; };
+		E8EC8C9B1758E80F00BAC0F8 /* camera_back_btn@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E8EC8C791758E80F00BAC0F8 /* camera_back_btn@2x.png */; };
+		E8EC8C9C1758E80F00BAC0F8 /* camera_back_btn_highlight.png in Resources */ = {isa = PBXBuildFile; fileRef = E8EC8C7A1758E80F00BAC0F8 /* camera_back_btn_highlight.png */; };
+		E8EC8C9D1758E80F00BAC0F8 /* camera_back_btn_highlight@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E8EC8C7B1758E80F00BAC0F8 /* camera_back_btn_highlight@2x.png */; };
+		E8EC8C9E1758E80F00BAC0F8 /* camera_barcode_btn.png in Resources */ = {isa = PBXBuildFile; fileRef = E8EC8C7C1758E80F00BAC0F8 /* camera_barcode_btn.png */; };
+		E8EC8C9F1758E80F00BAC0F8 /* camera_barcode_btn@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E8EC8C7D1758E80F00BAC0F8 /* camera_barcode_btn@2x.png */; };
+		E8EC8CA01758E80F00BAC0F8 /* camera_btn.png in Resources */ = {isa = PBXBuildFile; fileRef = E8EC8C7E1758E80F00BAC0F8 /* camera_btn.png */; };
+		E8EC8CA11758E80F00BAC0F8 /* camera_btn@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E8EC8C7F1758E80F00BAC0F8 /* camera_btn@2x.png */; };
+		E8EC8CA21758E80F00BAC0F8 /* camera_btn_highlight.png in Resources */ = {isa = PBXBuildFile; fileRef = E8EC8C801758E80F00BAC0F8 /* camera_btn_highlight.png */; };
+		E8EC8CA31758E80F00BAC0F8 /* camera_btn_highlight@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E8EC8C811758E80F00BAC0F8 /* camera_btn_highlight@2x.png */; };
+		E8EC8CA41758E80F00BAC0F8 /* camera_flash_off.png in Resources */ = {isa = PBXBuildFile; fileRef = E8EC8C821758E80F00BAC0F8 /* camera_flash_off.png */; };
+		E8EC8CA51758E80F00BAC0F8 /* camera_flash_off@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E8EC8C831758E80F00BAC0F8 /* camera_flash_off@2x.png */; };
+		E8EC8CA61758E80F00BAC0F8 /* camera_flash_on.png in Resources */ = {isa = PBXBuildFile; fileRef = E8EC8C841758E80F00BAC0F8 /* camera_flash_on.png */; };
+		E8EC8CA71758E80F00BAC0F8 /* camera_flash_on@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E8EC8C851758E80F00BAC0F8 /* camera_flash_on@2x.png */; };
+		E8EC8CA81758E80F00BAC0F8 /* camera_ok_btn.png in Resources */ = {isa = PBXBuildFile; fileRef = E8EC8C861758E80F00BAC0F8 /* camera_ok_btn.png */; };
+		E8EC8CA91758E80F00BAC0F8 /* camera_ok_btn@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E8EC8C871758E80F00BAC0F8 /* camera_ok_btn@2x.png */; };
+		E8EC8CAA1758E80F00BAC0F8 /* camera_ok_btn_highlight.png in Resources */ = {isa = PBXBuildFile; fileRef = E8EC8C881758E80F00BAC0F8 /* camera_ok_btn_highlight.png */; };
+		E8EC8CAB1758E80F00BAC0F8 /* camera_ok_btn_highlight@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E8EC8C891758E80F00BAC0F8 /* camera_ok_btn_highlight@2x.png */; };
+		E8EC8CAC1758E80F00BAC0F8 /* camera_toolBar_bg.png in Resources */ = {isa = PBXBuildFile; fileRef = E8EC8C8A1758E80F00BAC0F8 /* camera_toolBar_bg.png */; };
+		E8EC8CAD1758E80F00BAC0F8 /* camera_toolBar_bg@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E8EC8C8B1758E80F00BAC0F8 /* camera_toolBar_bg@2x.png */; };
+		E8EC8CAE1758E80F00BAC0F8 /* XHFAlbumViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = E8EC8C8C1758E80F00BAC0F8 /* XHFAlbumViewController.h */; };
+		E8EC8CAF1758E80F00BAC0F8 /* XHFAlbumViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E8EC8C8D1758E80F00BAC0F8 /* XHFAlbumViewController.m */; };
+		E8EC8CB01758E80F00BAC0F8 /* XHFCameraViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = E8EC8C8E1758E80F00BAC0F8 /* XHFCameraViewController.h */; };
+		E8EC8CB11758E80F00BAC0F8 /* XHFCameraViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E8EC8C8F1758E80F00BAC0F8 /* XHFCameraViewController.m */; };
+		E8EC8CB21758E80F00BAC0F8 /* XHFMultiPhotoPicker.h in Headers */ = {isa = PBXBuildFile; fileRef = E8EC8C901758E80F00BAC0F8 /* XHFMultiPhotoPicker.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E8EC8CB31758E80F00BAC0F8 /* XHFPhotoPicker.m in Sources */ = {isa = PBXBuildFile; fileRef = E8EC8C911758E80F00BAC0F8 /* XHFPhotoPicker.m */; };
+		E8EC8CB41758E80F00BAC0F8 /* XHFSelectPhoto.h in Headers */ = {isa = PBXBuildFile; fileRef = E8EC8C921758E80F00BAC0F8 /* XHFSelectPhoto.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E8EC8CB51758E80F00BAC0F8 /* XHFSelectPhoto.m in Sources */ = {isa = PBXBuildFile; fileRef = E8EC8C931758E80F00BAC0F8 /* XHFSelectPhoto.m */; };
+		E8EC8CB61758E80F00BAC0F8 /* XHFThumbnailBar.h in Headers */ = {isa = PBXBuildFile; fileRef = E8EC8C941758E80F00BAC0F8 /* XHFThumbnailBar.h */; };
+		E8EC8CB71758E80F00BAC0F8 /* XHFThumbnailBar.m in Sources */ = {isa = PBXBuildFile; fileRef = E8EC8C951758E80F00BAC0F8 /* XHFThumbnailBar.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		E8CD48DA175896380060E4D4 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		E8CD48DE175896380060E4D4 /* MultiPhotoPickerFramework-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "MultiPhotoPickerFramework-Info.plist"; sourceTree = "<group>"; };
+		E8CD48E0175896380060E4D4 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		E8CD48E2175896380060E4D4 /* MultiPhotoPickerFramework-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MultiPhotoPickerFramework-Prefix.pch"; sourceTree = "<group>"; };
+		E8EC8C231758D77600BAC0F8 /* MultiPhotoPicker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework.static; includeInIndex = 0; path = MultiPhotoPicker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E8EC8C241758D77600BAC0F8 /* XHFMultiPhotoPicker-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "XHFMultiPhotoPicker-Info.plist"; path = "/Users/zhoufang/Documents/dev-git/iOS-MultiPhotoPicker/MultiPhotoPickerFramework/XHFMultiPhotoPicker-Info.plist"; sourceTree = "<absolute>"; };
+		E8EC8C661758E5E100BAC0F8 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		E8EC8C681758E5E800BAC0F8 /* AssetsLibrary.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AssetsLibrary.framework; path = System/Library/Frameworks/AssetsLibrary.framework; sourceTree = SDKROOT; };
+		E8EC8C741758E80F00BAC0F8 /* album_btn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = album_btn.png; sourceTree = "<group>"; };
+		E8EC8C751758E80F00BAC0F8 /* album_btn@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "album_btn@2x.png"; sourceTree = "<group>"; };
+		E8EC8C761758E80F00BAC0F8 /* album_btn_highlight.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = album_btn_highlight.png; sourceTree = "<group>"; };
+		E8EC8C771758E80F00BAC0F8 /* album_btn_highlight@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "album_btn_highlight@2x.png"; sourceTree = "<group>"; };
+		E8EC8C781758E80F00BAC0F8 /* camera_back_btn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = camera_back_btn.png; sourceTree = "<group>"; };
+		E8EC8C791758E80F00BAC0F8 /* camera_back_btn@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "camera_back_btn@2x.png"; sourceTree = "<group>"; };
+		E8EC8C7A1758E80F00BAC0F8 /* camera_back_btn_highlight.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = camera_back_btn_highlight.png; sourceTree = "<group>"; };
+		E8EC8C7B1758E80F00BAC0F8 /* camera_back_btn_highlight@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "camera_back_btn_highlight@2x.png"; sourceTree = "<group>"; };
+		E8EC8C7C1758E80F00BAC0F8 /* camera_barcode_btn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = camera_barcode_btn.png; sourceTree = "<group>"; };
+		E8EC8C7D1758E80F00BAC0F8 /* camera_barcode_btn@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "camera_barcode_btn@2x.png"; sourceTree = "<group>"; };
+		E8EC8C7E1758E80F00BAC0F8 /* camera_btn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = camera_btn.png; sourceTree = "<group>"; };
+		E8EC8C7F1758E80F00BAC0F8 /* camera_btn@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "camera_btn@2x.png"; sourceTree = "<group>"; };
+		E8EC8C801758E80F00BAC0F8 /* camera_btn_highlight.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = camera_btn_highlight.png; sourceTree = "<group>"; };
+		E8EC8C811758E80F00BAC0F8 /* camera_btn_highlight@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "camera_btn_highlight@2x.png"; sourceTree = "<group>"; };
+		E8EC8C821758E80F00BAC0F8 /* camera_flash_off.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = camera_flash_off.png; sourceTree = "<group>"; };
+		E8EC8C831758E80F00BAC0F8 /* camera_flash_off@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "camera_flash_off@2x.png"; sourceTree = "<group>"; };
+		E8EC8C841758E80F00BAC0F8 /* camera_flash_on.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = camera_flash_on.png; sourceTree = "<group>"; };
+		E8EC8C851758E80F00BAC0F8 /* camera_flash_on@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "camera_flash_on@2x.png"; sourceTree = "<group>"; };
+		E8EC8C861758E80F00BAC0F8 /* camera_ok_btn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = camera_ok_btn.png; sourceTree = "<group>"; };
+		E8EC8C871758E80F00BAC0F8 /* camera_ok_btn@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "camera_ok_btn@2x.png"; sourceTree = "<group>"; };
+		E8EC8C881758E80F00BAC0F8 /* camera_ok_btn_highlight.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = camera_ok_btn_highlight.png; sourceTree = "<group>"; };
+		E8EC8C891758E80F00BAC0F8 /* camera_ok_btn_highlight@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "camera_ok_btn_highlight@2x.png"; sourceTree = "<group>"; };
+		E8EC8C8A1758E80F00BAC0F8 /* camera_toolBar_bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = camera_toolBar_bg.png; sourceTree = "<group>"; };
+		E8EC8C8B1758E80F00BAC0F8 /* camera_toolBar_bg@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "camera_toolBar_bg@2x.png"; sourceTree = "<group>"; };
+		E8EC8C8C1758E80F00BAC0F8 /* XHFAlbumViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHFAlbumViewController.h; sourceTree = "<group>"; };
+		E8EC8C8D1758E80F00BAC0F8 /* XHFAlbumViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHFAlbumViewController.m; sourceTree = "<group>"; };
+		E8EC8C8E1758E80F00BAC0F8 /* XHFCameraViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHFCameraViewController.h; sourceTree = "<group>"; };
+		E8EC8C8F1758E80F00BAC0F8 /* XHFCameraViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHFCameraViewController.m; sourceTree = "<group>"; };
+		E8EC8C901758E80F00BAC0F8 /* XHFMultiPhotoPicker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHFMultiPhotoPicker.h; sourceTree = "<group>"; };
+		E8EC8C911758E80F00BAC0F8 /* XHFPhotoPicker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHFPhotoPicker.m; sourceTree = "<group>"; };
+		E8EC8C921758E80F00BAC0F8 /* XHFSelectPhoto.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHFSelectPhoto.h; sourceTree = "<group>"; };
+		E8EC8C931758E80F00BAC0F8 /* XHFSelectPhoto.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHFSelectPhoto.m; sourceTree = "<group>"; };
+		E8EC8C941758E80F00BAC0F8 /* XHFThumbnailBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHFThumbnailBar.h; sourceTree = "<group>"; };
+		E8EC8C951758E80F00BAC0F8 /* XHFThumbnailBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHFThumbnailBar.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		E8EC8BFB1758D77600BAC0F8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E8EC8BFC1758D77600BAC0F8 /* Foundation.framework in Frameworks */,
+				E8EC8C6A1758E61400BAC0F8 /* AssetsLibrary.framework in Frameworks */,
+				E8EC8C6B1758E61800BAC0F8 /* AVFoundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		E8CD48CA175896380060E4D4 = {
+			isa = PBXGroup;
+			children = (
+				E8EC8C721758E80F00BAC0F8 /* XHFMultiPhotoPicker */,
+				E8CD48DC175896380060E4D4 /* MultiPhotoPickerFramework */,
+				E8CD48D9175896380060E4D4 /* Frameworks */,
+				E8CD48D8175896380060E4D4 /* Products */,
+				E8EC8C241758D77600BAC0F8 /* XHFMultiPhotoPicker-Info.plist */,
+			);
+			sourceTree = "<group>";
+		};
+		E8CD48D8175896380060E4D4 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				E8EC8C231758D77600BAC0F8 /* MultiPhotoPicker.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		E8CD48D9175896380060E4D4 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E8EC8C681758E5E800BAC0F8 /* AssetsLibrary.framework */,
+				E8EC8C661758E5E100BAC0F8 /* AVFoundation.framework */,
+				E8CD48DA175896380060E4D4 /* Foundation.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E8CD48DC175896380060E4D4 /* MultiPhotoPickerFramework */ = {
+			isa = PBXGroup;
+			children = (
+				E8CD48DD175896380060E4D4 /* Supporting Files */,
+			);
+			path = MultiPhotoPickerFramework;
+			sourceTree = "<group>";
+		};
+		E8CD48DD175896380060E4D4 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				E8CD48DE175896380060E4D4 /* MultiPhotoPickerFramework-Info.plist */,
+				E8CD48DF175896380060E4D4 /* InfoPlist.strings */,
+				E8CD48E2175896380060E4D4 /* MultiPhotoPickerFramework-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		E8EC8C721758E80F00BAC0F8 /* XHFMultiPhotoPicker */ = {
+			isa = PBXGroup;
+			children = (
+				E8EC8C731758E80F00BAC0F8 /* resources */,
+				E8EC8C8C1758E80F00BAC0F8 /* XHFAlbumViewController.h */,
+				E8EC8C8D1758E80F00BAC0F8 /* XHFAlbumViewController.m */,
+				E8EC8C8E1758E80F00BAC0F8 /* XHFCameraViewController.h */,
+				E8EC8C8F1758E80F00BAC0F8 /* XHFCameraViewController.m */,
+				E8EC8C901758E80F00BAC0F8 /* XHFMultiPhotoPicker.h */,
+				E8EC8C911758E80F00BAC0F8 /* XHFPhotoPicker.m */,
+				E8EC8C921758E80F00BAC0F8 /* XHFSelectPhoto.h */,
+				E8EC8C931758E80F00BAC0F8 /* XHFSelectPhoto.m */,
+				E8EC8C941758E80F00BAC0F8 /* XHFThumbnailBar.h */,
+				E8EC8C951758E80F00BAC0F8 /* XHFThumbnailBar.m */,
+			);
+			name = XHFMultiPhotoPicker;
+			path = ../XHFMultiPhotoPicker;
+			sourceTree = "<group>";
+		};
+		E8EC8C731758E80F00BAC0F8 /* resources */ = {
+			isa = PBXGroup;
+			children = (
+				E8EC8C741758E80F00BAC0F8 /* album_btn.png */,
+				E8EC8C751758E80F00BAC0F8 /* album_btn@2x.png */,
+				E8EC8C761758E80F00BAC0F8 /* album_btn_highlight.png */,
+				E8EC8C771758E80F00BAC0F8 /* album_btn_highlight@2x.png */,
+				E8EC8C781758E80F00BAC0F8 /* camera_back_btn.png */,
+				E8EC8C791758E80F00BAC0F8 /* camera_back_btn@2x.png */,
+				E8EC8C7A1758E80F00BAC0F8 /* camera_back_btn_highlight.png */,
+				E8EC8C7B1758E80F00BAC0F8 /* camera_back_btn_highlight@2x.png */,
+				E8EC8C7C1758E80F00BAC0F8 /* camera_barcode_btn.png */,
+				E8EC8C7D1758E80F00BAC0F8 /* camera_barcode_btn@2x.png */,
+				E8EC8C7E1758E80F00BAC0F8 /* camera_btn.png */,
+				E8EC8C7F1758E80F00BAC0F8 /* camera_btn@2x.png */,
+				E8EC8C801758E80F00BAC0F8 /* camera_btn_highlight.png */,
+				E8EC8C811758E80F00BAC0F8 /* camera_btn_highlight@2x.png */,
+				E8EC8C821758E80F00BAC0F8 /* camera_flash_off.png */,
+				E8EC8C831758E80F00BAC0F8 /* camera_flash_off@2x.png */,
+				E8EC8C841758E80F00BAC0F8 /* camera_flash_on.png */,
+				E8EC8C851758E80F00BAC0F8 /* camera_flash_on@2x.png */,
+				E8EC8C861758E80F00BAC0F8 /* camera_ok_btn.png */,
+				E8EC8C871758E80F00BAC0F8 /* camera_ok_btn@2x.png */,
+				E8EC8C881758E80F00BAC0F8 /* camera_ok_btn_highlight.png */,
+				E8EC8C891758E80F00BAC0F8 /* camera_ok_btn_highlight@2x.png */,
+				E8EC8C8A1758E80F00BAC0F8 /* camera_toolBar_bg.png */,
+				E8EC8C8B1758E80F00BAC0F8 /* camera_toolBar_bg@2x.png */,
+			);
+			path = resources;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		E8EC8BFD1758D77600BAC0F8 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E8EC8CB21758E80F00BAC0F8 /* XHFMultiPhotoPicker.h in Headers */,
+				E8EC8CB41758E80F00BAC0F8 /* XHFSelectPhoto.h in Headers */,
+				E8EC8CAE1758E80F00BAC0F8 /* XHFAlbumViewController.h in Headers */,
+				E8EC8CB01758E80F00BAC0F8 /* XHFCameraViewController.h in Headers */,
+				E8EC8CB61758E80F00BAC0F8 /* XHFThumbnailBar.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		E8EC8BF31758D77600BAC0F8 /* XHFMultiPhotoPicker */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E8EC8C201758D77600BAC0F8 /* Build configuration list for PBXNativeTarget "XHFMultiPhotoPicker" */;
+			buildPhases = (
+				E8EC8BF41758D77600BAC0F8 /* ShellScript */,
+				E8EC8BF51758D77600BAC0F8 /* Sources */,
+				E8EC8BFB1758D77600BAC0F8 /* Frameworks */,
+				E8EC8BFD1758D77600BAC0F8 /* Headers */,
+				E8EC8C041758D77600BAC0F8 /* Resources */,
+				E8EC8C1E1758D77600BAC0F8 /* ShellScript */,
+				E8EC8C1F1758D77600BAC0F8 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = XHFMultiPhotoPicker;
+			productName = MultiPhotoPickerFramework;
+			productReference = E8EC8C231758D77600BAC0F8 /* MultiPhotoPicker.framework */;
+			productType = "com.apple.product-type.framework.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		E8CD48CB175896380060E4D4 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0460;
+				ORGANIZATIONNAME = xuhengfei;
+			};
+			buildConfigurationList = E8CD48CE175896380060E4D4 /* Build configuration list for PBXProject "MultiPhotoPickerFramework" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = E8CD48CA175896380060E4D4;
+			productRefGroup = E8CD48D8175896380060E4D4 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				E8EC8BF31758D77600BAC0F8 /* XHFMultiPhotoPicker */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		E8EC8C041758D77600BAC0F8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E8EC8C051758D77600BAC0F8 /* InfoPlist.strings in Resources */,
+				E8EC8C961758E80F00BAC0F8 /* album_btn.png in Resources */,
+				E8EC8C971758E80F00BAC0F8 /* album_btn@2x.png in Resources */,
+				E8EC8C981758E80F00BAC0F8 /* album_btn_highlight.png in Resources */,
+				E8EC8C991758E80F00BAC0F8 /* album_btn_highlight@2x.png in Resources */,
+				E8EC8C9A1758E80F00BAC0F8 /* camera_back_btn.png in Resources */,
+				E8EC8C9B1758E80F00BAC0F8 /* camera_back_btn@2x.png in Resources */,
+				E8EC8C9C1758E80F00BAC0F8 /* camera_back_btn_highlight.png in Resources */,
+				E8EC8C9D1758E80F00BAC0F8 /* camera_back_btn_highlight@2x.png in Resources */,
+				E8EC8C9E1758E80F00BAC0F8 /* camera_barcode_btn.png in Resources */,
+				E8EC8C9F1758E80F00BAC0F8 /* camera_barcode_btn@2x.png in Resources */,
+				E8EC8CA01758E80F00BAC0F8 /* camera_btn.png in Resources */,
+				E8EC8CA11758E80F00BAC0F8 /* camera_btn@2x.png in Resources */,
+				E8EC8CA21758E80F00BAC0F8 /* camera_btn_highlight.png in Resources */,
+				E8EC8CA31758E80F00BAC0F8 /* camera_btn_highlight@2x.png in Resources */,
+				E8EC8CA41758E80F00BAC0F8 /* camera_flash_off.png in Resources */,
+				E8EC8CA51758E80F00BAC0F8 /* camera_flash_off@2x.png in Resources */,
+				E8EC8CA61758E80F00BAC0F8 /* camera_flash_on.png in Resources */,
+				E8EC8CA71758E80F00BAC0F8 /* camera_flash_on@2x.png in Resources */,
+				E8EC8CA81758E80F00BAC0F8 /* camera_ok_btn.png in Resources */,
+				E8EC8CA91758E80F00BAC0F8 /* camera_ok_btn@2x.png in Resources */,
+				E8EC8CAA1758E80F00BAC0F8 /* camera_ok_btn_highlight.png in Resources */,
+				E8EC8CAB1758E80F00BAC0F8 /* camera_ok_btn_highlight@2x.png in Resources */,
+				E8EC8CAC1758E80F00BAC0F8 /* camera_toolBar_bg.png in Resources */,
+				E8EC8CAD1758E80F00BAC0F8 /* camera_toolBar_bg@2x.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		E8EC8BF41758D77600BAC0F8 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "set -e\n\nset +u\nif [[ $UFW_MASTER_SCRIPT_RUNNING ]]\nthen\n    # Nothing for the slave script to do\n    exit 0\nfi\nset -u\n\nif [[ \"$SDK_NAME\" =~ ([A-Za-z]+) ]]\nthen\n    UFW_SDK_PLATFORM=${BASH_REMATCH[1]}\nelse\n    echo \"Could not find platform name from SDK_NAME: $SDK_NAME\"\n    exit 1\nfi\n\nif [[ \"$SDK_NAME\" =~ ([0-9]+.*$) ]]\nthen\n\tUFW_SDK_VERSION=${BASH_REMATCH[1]}\nelse\n    echo \"Could not find sdk version  from SDK_NAME: $SDK_NAME\"\n    exit 1\nfi\n\nif [[ \"$UFW_SDK_PLATFORM\" = \"iphoneos\" ]]\nthen\n    UFW_OTHER_PLATFORM=iphonesimulator\nelse\n    UFW_OTHER_PLATFORM=iphoneos\nfi\n\nif [[ \"$BUILT_PRODUCTS_DIR\" =~ (.*)$UFW_SDK_PLATFORM$ ]]\nthen\n    UFW_OTHER_BUILT_PRODUCTS_DIR=\"${BASH_REMATCH[1]}${UFW_OTHER_PLATFORM}\"\nelse\n    echo \"Could not find $UFW_SDK_PLATFORM in $BUILT_PRODUCTS_DIR\"\n    exit 1\nfi\n\nONLY_ACTIVE_PLATFORM=${ONLY_ACTIVE_PLATFORM:-$ONLY_ACTIVE_ARCH}\n\n# Short-circuit if all binaries are up to date\n\nif [[ -f \"${BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}\" ]] && \\\n   [[ -f \"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.embeddedframework/${EXECUTABLE_PATH}\" ]] && \\\n   [[ ! \"${BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}\" -nt \"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.embeddedframework/${EXECUTABLE_PATH}\" ]] && \\\n  ([[ \"${ONLY_ACTIVE_PLATFORM}\" == \"YES\" ]] || \\\n    ([[ -f \"${UFW_OTHER_BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}\" ]] && \\\n     [[ -f \"${UFW_OTHER_BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.embeddedframework/${EXECUTABLE_PATH}\" ]] && \\\n     [[ ! \"${UFW_OTHER_BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}\" -nt \"${UFW_OTHER_BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.embeddedframework/${EXECUTABLE_PATH}\" ]]\n    )\n  )\nthen\n    exit 0\nfi\n\n\n# Clean other platform if needed\n\nif [[ ! -f \"${BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}\" ]] && [[ \"${ONLY_ACTIVE_PLATFORM}\" != \"YES\" ]]\nthen\n\techo \"Platform \\\"$UFW_SDK_PLATFORM\\\" was cleaned recently. Cleaning \\\"$UFW_OTHER_PLATFORM\\\" as well\"\n\techo xcodebuild -project \"${PROJECT_FILE_PATH}\" -target \"${TARGET_NAME}\" -configuration \"${CONFIGURATION}\" -sdk ${UFW_OTHER_PLATFORM}${UFW_SDK_VERSION} BUILD_DIR=\"${BUILD_DIR}\" CONFIGURATION_TEMP_DIR=\"${PROJECT_TEMP_DIR}/${CONFIGURATION}-${UFW_OTHER_PLATFORM}\" clean\n\txcodebuild -project \"${PROJECT_FILE_PATH}\" -target \"${TARGET_NAME}\" -configuration \"${CONFIGURATION}\" -sdk ${UFW_OTHER_PLATFORM}${UFW_SDK_VERSION} BUILD_DIR=\"${BUILD_DIR}\" CONFIGURATION_TEMP_DIR=\"${PROJECT_TEMP_DIR}/${CONFIGURATION}-${UFW_OTHER_PLATFORM}\" clean\nfi\n\n\n# Make sure we are building from fresh binaries\n\nrm -rf \"${BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}\"\nrm -rf \"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.embeddedframework\"\n\nif [[ \"${ONLY_ACTIVE_PLATFORM}\" != \"YES\" ]]\nthen\n    rm -rf \"${UFW_OTHER_BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}\"\n    rm -rf \"${UFW_OTHER_BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.embeddedframework\"\nfi\n";
+		};
+		E8EC8C1E1758D77600BAC0F8 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "HEADERS_ROOT=$SRCROOT/$PRODUCT_NAME\nFRAMEWORK_HEADERS_DIR=\"$BUILT_PRODUCTS_DIR/$WRAPPER_NAME/Versions/$FRAMEWORK_VERSION/Headers\"\n\n## only header files expected at this point\nPUBLIC_HEADERS=$(find $FRAMEWORK_HEADERS_DIR/. -not -type d 2> /dev/null | sed -e \"s@.*/@@g\")\n\nFIND_OPTS=\"\"\nfor PUBLIC_HEADER in $PUBLIC_HEADERS; do\n  if [ -n \"$FIND_OPTS\" ]; then\n    FIND_OPTS=\"$FIND_OPTS -o\"\n  fi\n  FIND_OPTS=\"$FIND_OPTS -name '$PUBLIC_HEADER'\"\ndone\n\nif [ -n \"$FIND_OPTS\" ]; then\n  for ORIG_HEADER in $(eval \"find $HEADERS_ROOT/. $FIND_OPTS\" 2> /dev/null | sed -e \"s@^$HEADERS_ROOT/./@@g\"); do\n    PUBLIC_HEADER=$(basename $ORIG_HEADER)\n    RELATIVE_PATH=$(dirname $ORIG_HEADER)\n    if [ -e $FRAMEWORK_HEADERS_DIR/$PUBLIC_HEADER ]; then\n      mkdir -p \"$FRAMEWORK_HEADERS_DIR/$RELATIVE_PATH\"\n      mv \"$FRAMEWORK_HEADERS_DIR/$PUBLIC_HEADER\" \"$FRAMEWORK_HEADERS_DIR/$RELATIVE_PATH/$PUBLIC_HEADER\"\n    fi\n  done\nfi\n";
+		};
+		E8EC8C1F1758D77600BAC0F8 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "set -e\n\nset +u\nif [[ $UFW_MASTER_SCRIPT_RUNNING ]]\nthen\n    # Nothing for the slave script to do\n    exit 0\nfi\nset -u\nexport UFW_MASTER_SCRIPT_RUNNING=1\n\n\n# Functions\n\n## List files in the specified directory, storing to the specified array.\n#\n# @param $1 The path to list\n# @param $2 The name of the array to fill\n#\n##\nlist_files ()\n{\n    filelist=$(ls \"$1\")\n    while read line\n    do\n        eval \"$2[\\${#$2[*]}]=\\\"\\$line\\\"\"\n    done <<< \"$filelist\"\n}\n\n\n# Sanity check\n\nif [[ ! -f \"${BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}\" ]]\nthen\n    echo \"Framework target \\\"${TARGET_NAME}\\\" had no source files to build from. Make sure your source files have the correct target membership\"\n    exit 1\nfi\n\n\n# Gather information\n\nif [[ \"$SDK_NAME\" =~ ([A-Za-z]+) ]]\nthen\n    UFW_SDK_PLATFORM=${BASH_REMATCH[1]}\nelse\n    echo \"Could not find platform name from SDK_NAME: $SDK_NAME\"\n    exit 1\nfi\n\nif [[ \"$SDK_NAME\" =~ ([0-9]+.*$) ]]\nthen\n    UFW_SDK_VERSION=${BASH_REMATCH[1]}\nelse\n    echo \"Could not find sdk version from SDK_NAME: $SDK_NAME\"\n    exit 1\nfi\n\nif [[ \"$UFW_SDK_PLATFORM\" = \"iphoneos\" ]]\nthen\n    UFW_OTHER_PLATFORM=iphonesimulator\nelse\n    UFW_OTHER_PLATFORM=iphoneos\nfi\n\nif [[ \"$BUILT_PRODUCTS_DIR\" =~ (.*)$UFW_SDK_PLATFORM$ ]]\nthen\n    UFW_OTHER_BUILT_PRODUCTS_DIR=\"${BASH_REMATCH[1]}${UFW_OTHER_PLATFORM}\"\nelse\n    echo \"Could not find $UFW_SDK_PLATFORM in $BUILT_PRODUCTS_DIR\"\n    exit 1\nfi\n\nONLY_ACTIVE_PLATFORM=${ONLY_ACTIVE_PLATFORM:-$ONLY_ACTIVE_ARCH}\n\n# Short-circuit if all binaries are up to date.\n# We already checked the other platform in the prerun script.\n\nif [[ -f \"${BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}\" ]] && [[ -f \"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.embeddedframework/${EXECUTABLE_PATH}\" ]] && [[ ! \"${BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}\" -nt \"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.embeddedframework/${EXECUTABLE_PATH}\" ]]\nthen\n    exit 0\nfi\n\nif [ \"${ONLY_ACTIVE_PLATFORM}\" == \"YES\" ]\nthen\n    echo \"ONLY_ACTIVE_PLATFORM=${ONLY_ACTIVE_PLATFORM}: Skipping other platform build\"\nelse\n    # Make sure the other platform gets built\n    \n    echo \"Build other platform\"\n    \n    echo xcodebuild -project \"${PROJECT_FILE_PATH}\" -target \"${TARGET_NAME}\" -configuration \"${CONFIGURATION}\" -sdk ${UFW_OTHER_PLATFORM}${UFW_SDK_VERSION} BUILD_DIR=\"${BUILD_DIR}\" CONFIGURATION_TEMP_DIR=\"${PROJECT_TEMP_DIR}/${CONFIGURATION}-${UFW_OTHER_PLATFORM}\" $ACTION\n    xcodebuild -project \"${PROJECT_FILE_PATH}\" -target \"${TARGET_NAME}\" -configuration \"${CONFIGURATION}\" -sdk ${UFW_OTHER_PLATFORM}${UFW_SDK_VERSION} BUILD_DIR=\"${BUILD_DIR}\" CONFIGURATION_TEMP_DIR=\"${PROJECT_TEMP_DIR}/${CONFIGURATION}-${UFW_OTHER_PLATFORM}\" $ACTION\n    \n    \n    # Build the fat static library binary\n    \n    echo \"Create universal static library\"\n    \n    echo \"$PLATFORM_DEVELOPER_BIN_DIR/libtool\" -static \"${BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}\" \"${UFW_OTHER_BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}\" -o \"${BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}.temp\"\n    \"$PLATFORM_DEVELOPER_BIN_DIR/libtool\" -static \"${BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}\" \"${UFW_OTHER_BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}\" -o \"${BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}.temp\"\n    \n    echo mv \"${BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}.temp\" \"${BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}\"\n    mv \"${BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}.temp\" \"${BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}\"\nfi\n\n# Build embedded framework structure\n\necho \"Build Embedded Framework\"\n\necho rm -rf \"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.embeddedframework\"\nrm -rf \"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.embeddedframework\"\necho mkdir -p \"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.embeddedframework/Resources\"\nmkdir -p \"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.embeddedframework/Resources\"\necho cp -a \"${BUILT_PRODUCTS_DIR}/${WRAPPER_NAME}\" \"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.embeddedframework/\"\ncp -a \"${BUILT_PRODUCTS_DIR}/${WRAPPER_NAME}\" \"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.embeddedframework/\"\n\ndeclare -a UFW_FILE_LIST\nlist_files \"${BUILT_PRODUCTS_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}\" UFW_FILE_LIST\nfor filename in \"${UFW_FILE_LIST[@]}\"\ndo\n    if [[ \"${filename}\" != \"Info.plist\" ]] && [[ ! \"${filename}\" =~ .*\\.lproj$ ]]\n    then\n        echo ln -sfh \"../${WRAPPER_NAME}/Resources/${filename}\" \"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.embeddedframework/Resources/${filename}\"\n        ln -sfh \"../${WRAPPER_NAME}/Resources/${filename}\" \"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.embeddedframework/Resources/${filename}\"\n    fi\ndone\n\n\nif [ \"${ONLY_ACTIVE_PLATFORM}\" != \"YES\" ]\nthen\n    # Replace other platform's framework with a copy of this one (so that both have the same universal binary)\n    \n    echo \"Copy from $UFW_SDK_PLATFORM to $UFW_OTHER_PLATFORM\"\n    \n    echo rm -rf \"${BUILD_DIR}/${CONFIGURATION}-${UFW_OTHER_PLATFORM}\"\n    rm -rf \"${BUILD_DIR}/${CONFIGURATION}-${UFW_OTHER_PLATFORM}\"\n    echo cp -a \"${BUILD_DIR}/${CONFIGURATION}-${UFW_SDK_PLATFORM}\" \"${BUILD_DIR}/${CONFIGURATION}-${UFW_OTHER_PLATFORM}\"\n    cp -a \"${BUILD_DIR}/${CONFIGURATION}-${UFW_SDK_PLATFORM}\" \"${BUILD_DIR}/${CONFIGURATION}-${UFW_OTHER_PLATFORM}\"\nfi\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		E8EC8BF51758D77600BAC0F8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E8EC8CAF1758E80F00BAC0F8 /* XHFAlbumViewController.m in Sources */,
+				E8EC8CB11758E80F00BAC0F8 /* XHFCameraViewController.m in Sources */,
+				E8EC8CB31758E80F00BAC0F8 /* XHFPhotoPicker.m in Sources */,
+				E8EC8CB51758E80F00BAC0F8 /* XHFSelectPhoto.m in Sources */,
+				E8EC8CB71758E80F00BAC0F8 /* XHFThumbnailBar.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		E8CD48DF175896380060E4D4 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E8CD48E0175896380060E4D4 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		E8CD48E3175896380060E4D4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		E8CD48E4175896380060E4D4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		E8EC8C211758D77600BAC0F8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = (
+					armv6,
+					"$(ARCHS_STANDARD_32_BIT)",
+				);
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				FRAMEWORK_VERSION = A;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "MultiPhotoPickerFramework/MultiPhotoPickerFramework-Prefix.pch";
+				INFOPLIST_FILE = "XHFMultiPhotoPicker-Info.plist";
+				PRODUCT_NAME = XHFMultiPhotoPicker;
+				SKIP_INSTALL = YES;
+				WRAPPER_EXTENSION = framework;
+			};
+			name = Debug;
+		};
+		E8EC8C221758D77600BAC0F8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = (
+					armv6,
+					"$(ARCHS_STANDARD_32_BIT)",
+				);
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				FRAMEWORK_VERSION = A;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "MultiPhotoPickerFramework/MultiPhotoPickerFramework-Prefix.pch";
+				INFOPLIST_FILE = "XHFMultiPhotoPicker-Info.plist";
+				PRODUCT_NAME = XHFMultiPhotoPicker;
+				SKIP_INSTALL = YES;
+				WRAPPER_EXTENSION = framework;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		E8CD48CE175896380060E4D4 /* Build configuration list for PBXProject "MultiPhotoPickerFramework" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E8CD48E3175896380060E4D4 /* Debug */,
+				E8CD48E4175896380060E4D4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E8EC8C201758D77600BAC0F8 /* Build configuration list for PBXNativeTarget "XHFMultiPhotoPicker" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E8EC8C211758D77600BAC0F8 /* Debug */,
+				E8EC8C221758D77600BAC0F8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = E8CD48CB175896380060E4D4 /* Project object */;
+}

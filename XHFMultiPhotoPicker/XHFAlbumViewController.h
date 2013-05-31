@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import <AssetsLibrary/AssetsLibrary.h>
-#import "XHFDefine.h"
+#import "XHFMultiPhotoPicker.h"
 @class XHFMultiSelectItem;
 
 @interface XHFAlbumViewController : UINavigationController

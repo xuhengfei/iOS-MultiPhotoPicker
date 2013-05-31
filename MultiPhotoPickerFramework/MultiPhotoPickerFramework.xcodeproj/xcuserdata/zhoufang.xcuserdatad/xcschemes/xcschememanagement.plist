@@ -4,25 +4,25 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>MultiPhotoPicker.xcscheme</key>
+		<key>XHFMultiPhotoPicker.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
 			<integer>1</integer>
 		</dict>
-		<key>MultiPhotoPickerExample.xcscheme</key>
-		<dict>
-			<key>orderHint</key>
-			<integer>0</integer>
-		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>E863DE74175890FB00234E5D</key>
+		<key>E8CD48D6175896380060E4D4</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>E87360E41757387F007F7487</key>
+		<key>E8CD493217589D720060E4D4</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>E8EC8BF31758D77600BAC0F8</key>
 		<dict>
 			<key>primary</key>
 			<true/>

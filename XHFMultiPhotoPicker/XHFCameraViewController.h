@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "XHFDefine.h"
+#import "XHFMultiPhotoPicker.h"
 
 @interface XHFCameraViewController : UIViewController
 

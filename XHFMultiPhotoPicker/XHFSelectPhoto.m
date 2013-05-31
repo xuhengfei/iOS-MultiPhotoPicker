@@ -8,6 +8,8 @@
 
 #import "XHFSelectPhoto.h"
 
+static NSString *localCacheFolder;
+
 @implementation XHFSelectPhoto
 
 + (void)setLocalCacheFolder:(NSString *)path{
@@ -25,8 +27,8 @@
     if([[NSFileManager defaultManager] fileExistsAtPath:localpath]){
             
         UIImage *originImage=[[UIImage alloc] initWithContentsOfFile:localpath];
-        UIGraphicsBeginImageContext(CGSizeMake(originImage.size.width*0.1f, originImage.size.height*0.1f));
-        [originImage drawInRect:CGRectMake(0, 0, originImage.size.width*0.1f, originImage.size.height*0.1f)];
+        UIGraphicsBeginImageContext(CGSizeMake(originImage.size.width*0.5f, originImage.size.height*0.5f));
+        [originImage drawInRect:CGRectMake(0, 0, originImage.size.width*0.5f, originImage.size.height*0.5f)];
             
         UIImage *image=UIGraphicsGetImageFromCurrentImageContext();
         UIGraphicsEndImageContext();

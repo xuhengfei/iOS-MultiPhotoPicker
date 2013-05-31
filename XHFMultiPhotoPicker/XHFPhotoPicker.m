@@ -6,7 +6,7 @@
 //  Copyright (c) 2013年 周方. All rights reserved.
 //
 
-#import "XHFPhotoPicker.h"
+#import "XHFMultiPhotoPicker.h"
 #import "XHFCameraViewController.h"
 #import "XHFAlbumViewController.h"
 
@@ -33,9 +33,9 @@ static ActionSheetObject *singleton;
 - (void)actionSheet:(UIActionSheet *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex{
     NSString *str=[actionSheet buttonTitleAtIndex:buttonIndex];
     if( [str isEqualToString:@"拍照"]){
-        [XHFPhotoPicker showWithType:CAMERA InitPhotos:self.photos ViewController:self.vc ResultBlock:self.resultBlock];
+        [XHFPhotoPicker pickWithType:CAMERA InitPhotos:self.photos ViewController:self.vc ResultBlock:self.resultBlock];
     }else if([str isEqualToString:@"相册"]){
-        [XHFPhotoPicker showWithType:ALBUM InitPhotos:self.photos ViewController:self.vc ResultBlock:self.resultBlock];
+        [XHFPhotoPicker pickWithType:ALBUM InitPhotos:self.photos ViewController:self.vc ResultBlock:self.resultBlock];
     }else{
         if(_resultBlock !=nil){
             _resultBlock(self.photos);
@@ -48,7 +48,7 @@ static ActionSheetObject *singleton;
 
 @implementation XHFPhotoPicker
 
-+ (void)showWithType:(SOURCE_TYPE)type InitPhotos:(NSArray *)photos ViewController:(UIViewController *)vc ResultBlock:(XHFResultBlock)resultBlock{
++ (void)pickWithType:(SOURCE_TYPE)type InitPhotos:(NSArray *)photos ViewController:(UIViewController *)vc ResultBlock:(XHFResultBlock)resultBlock{
     if(type==USER_SELECT){
         ActionSheetObject *object=[[ActionSheetObject alloc]init];
         object.vc=vc;
@@ -66,7 +66,6 @@ static ActionSheetObject *singleton;
         [vc presentViewController:album animated:YES completion:nil];
     }else if(type==CAMERA){
         if(![UIImagePickerController isCameraDeviceAvailable:UIImagePickerControllerCameraDeviceRear]){
-            NSLog(@"not support");
             UIAlertView *alert=[[UIAlertView alloc]initWithTitle:@"出错了" message:@"设备不支持摄像头" delegate:nil cancelButtonTitle:@"确定" otherButtonTitles:nil, nil];
             [alert show];
             return;
@@ -75,7 +74,7 @@ static ActionSheetObject *singleton;
         XHFCameraViewController *camera=[[XHFCameraViewController alloc]initWithInitPhotos:photos];
         camera.ReturnBlock=^(NSArray *photos,SOURCE_TYPE type){
             if(type==ALBUM){
-                [self showWithType:ALBUM InitPhotos:photos ViewController:vc ResultBlock:resultBlock];
+                [self pickWithType:ALBUM InitPhotos:photos ViewController:vc ResultBlock:resultBlock];
                 return;
             }
             if(resultBlock!=nil){

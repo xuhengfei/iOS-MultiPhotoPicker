@@ -7,8 +7,9 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
 
-static NSString *localCacheFolder;
+
 
 @interface XHFSelectPhoto : NSObject
 //本地文件路径

@@ -7,8 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "XHFDefine.h"
-#import "XHFSelectPhoto.h"
+#import "XHFMultiPhotoPicker.h"
+
 
 @interface XHFThumbnailBar : UIView
 //当点击删除按钮时会触发的block

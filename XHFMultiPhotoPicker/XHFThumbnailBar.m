@@ -7,7 +7,6 @@
 //
 
 #import "XHFThumbnailBar.h"
-#import "XHFDefine.h"
 #import "XHFSelectPhoto.h"
 #import <QuartzCore/QuartzCore.h>
 
@@ -30,7 +29,6 @@
             [view removeFromSuperview];
         }
     }
-    NSLog(@"draw and photos count:%i",[_photos count]);
     for(int i=0;i<MAX_PHOTO_COUNT;i++){
         CGRect rectV=CGRectMake(11.3*(i+1)+(50*i), 0, 50, 50);
         UIView *rectView=[[UIView alloc]initWithFrame:rectV];

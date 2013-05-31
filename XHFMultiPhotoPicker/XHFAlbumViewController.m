@@ -6,10 +6,11 @@
 //  Copyright (c) 2013年 周方. All rights reserved.
 //
 
-#import "XHFDefine.h"
-#import "XHFAlbumViewController.h"
-#import "XHFThumbnailBar.h"
+
 #import <AssetsLibrary/AssetsLibrary.h>
+#import "XHFThumbnailBar.h"
+#import "XHFAlbumViewController.h"
+#import "XHFMultiPhotoPicker.h"
 
 @implementation XHFAlbumViewController{
     @public
@@ -196,7 +197,9 @@
     XHFAlbumViewController *nav=(XHFAlbumViewController *)self.navigationController;
     [self dismissViewControllerAnimated:YES completion:nil];
     if(nav.resultBlock!=nil){
+        
         nav.resultBlock(nav->_photos);
+        
     }
 }
 #pragma mark UITableViewDataSource
