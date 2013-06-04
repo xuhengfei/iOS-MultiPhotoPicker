@@ -9,6 +9,7 @@
 
 #import "XHFCameraViewController.h"
 #import "XHFThumbnailBar.h"
+#import "XHFPhotoBrowseViewController.h"
 #import "XHFAlbumViewController.h"
 #import <AVFoundation/AVFoundation.h>
 
@@ -18,18 +19,23 @@
 
 @implementation XHFCameraViewController{
     NSMutableArray *_photos;
+    AVCaptureDevice *_device;
     AVCaptureSession *_session;
     
     AVCaptureStillImageOutput *_output;
     
     AVCaptureVideoPreviewLayer *_monitorLayer;
     
+    UIView *_cameraContainerView;//容器，用作前后摄像头切换
     UIView *_monitorView;
     
     UIButton *_backButton;
     UIButton *_albumButton;
     UIButton *_takePicButton;
     UIButton *_confirmButton;
+    
+    UIButton *_cameraSwapButton;//前后摄像头切换按钮
+    UIButton *_flashlightButton;//闪光灯按钮
     
     XHFThumbnailBar *_thumbnailBar;
 }
@@ -46,17 +52,19 @@
 {
     [super viewDidLoad];
     
-    self.view.backgroundColor=[UIColor whiteColor];
+    self.view.backgroundColor=[UIColor blackColor];
     
 	//配置摄像头监控区
-    _monitorView=[[UIView alloc]initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT)];
+    _cameraContainerView=[[UIView alloc]initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT)];
+    _monitorView=[[UIView alloc]initWithFrame:_cameraContainerView.bounds];
+    [_cameraContainerView addSubview:_monitorView];
     
     _session=[[AVCaptureSession alloc] init];
     [_session setSessionPreset:AVCaptureSessionPresetPhoto];
     
-    AVCaptureDevice *device=[AVCaptureDevice defaultDeviceWithMediaType:AVMediaTypeVideo];
+    _device=[AVCaptureDevice defaultDeviceWithMediaType:AVMediaTypeVideo];
     NSError *error=nil;
-    AVCaptureDeviceInput *input=[AVCaptureDeviceInput deviceInputWithDevice:device error:&error];
+    AVCaptureDeviceInput *input=[AVCaptureDeviceInput deviceInputWithDevice:_device error:&error];
     if(!input){
         NSLog(@"%@",error);
     }
@@ -74,17 +82,50 @@
     _monitorLayer.frame=_monitorView.bounds;
     _monitorLayer.videoGravity=AVLayerVideoGravityResizeAspectFill;
     [_monitorView.layer addSublayer:_monitorLayer];
-    [self.view addSubview:_monitorView];
+    [self.view addSubview:_cameraContainerView];
     
+    //闪光灯按钮
+    _flashlightButton=[UIButton buttonWithType:UIButtonTypeCustom];
+    _flashlightButton.frame=CGRectMake(20, 20, 78, 35);
+    [_flashlightButton addTarget:self action:@selector(turnFlashLight:) forControlEvents:UIControlEventTouchUpInside];
+    if(_device!=nil && [_device hasFlash]){
+        [_device lockForConfiguration:nil];
+        [_device setFlashMode:AVCaptureFlashModeOff];
+        [_device unlockForConfiguration];
+        [_cameraContainerView addSubview:_flashlightButton];
+        [_flashlightButton setImage:[UIImage imageNamed:@"camera_flash_on.png"] forState:UIControlStateNormal];
+    }
+    
+    //前后摄像头切换按钮
+    if([UIImagePickerController isCameraDeviceAvailable:UIImagePickerControllerCameraDeviceFront] &&
+       [UIImagePickerController isCameraDeviceAvailable:UIImagePickerControllerCameraDeviceRear]){
+        _cameraSwapButton=[UIButton buttonWithType:UIButtonTypeRoundedRect];
+        [_cameraSwapButton setTitle:@"前后切换" forState:UIControlStateNormal];
+        _cameraSwapButton.frame=CGRectMake(220, 20, 80, 35);
+        [_cameraSwapButton addTarget:self action:@selector(swapFrontAndBackCameras) forControlEvents:UIControlEventTouchUpInside];
+        [_monitorView addSubview:_cameraSwapButton];
+    }
+        
     //配置5个缩略图区
     _thumbnailBar=[[XHFThumbnailBar alloc]initWithFrame:CGRectMake(0, SCREEN_HEIGHT-58-50-1.0f, SCREEN_WIDTH, 50)];
-    __weak __block NSMutableArray *tmpPhotos=_photos;
-    __weak __block XHFThumbnailBar *tmpBar=_thumbnailBar;
+    __block NSMutableArray *tmpPhotos=_photos;
+    __block XHFThumbnailBar *tmpBar=_thumbnailBar;
+    __block XHFCameraViewController *blockSelf=self;
     _thumbnailBar.removeBlock=[^(XHFSelectPhoto *photo){
         [tmpPhotos removeObject:photo];
         [tmpBar redrawWithSelectPhotos:tmpPhotos];
     } copy];
+    
+    _thumbnailBar.BrowseBlock=[^(int index){
+        XHFPhotoBrowseViewController *controller=[[XHFPhotoBrowseViewController alloc]initWithPhotos:tmpPhotos andIndex:index andReturnBlock:^(NSArray *photos) {
+            [tmpPhotos removeAllObjects];
+            [tmpPhotos addObjectsFromArray:photos];
+            [tmpBar redrawWithSelectPhotos:tmpPhotos];
+        }];
+        [blockSelf presentViewController:controller animated:YES completion:nil];
+    } copy];
     [_thumbnailBar redrawWithSelectPhotos:_photos];
+    
     [self.view addSubview:_thumbnailBar];
     
     //配置ToolBar
@@ -113,7 +154,6 @@
     _takePicButton.frame=CGRectMake(135, 12, 98, 40);
     [_takePicButton setImage:[UIImage imageNamed:@"camera_btn.png"] forState:UIControlStateNormal];
     [_takePicButton setImage:[UIImage imageNamed:@"camera_btn_highlight.png"] forState:UIControlStateHighlighted];
-    [_takePicButton setImage:[UIImage imageNamed:@"camera_btn_highlight.png"] forState:UIControlStateHighlighted];
     [_takePicButton addTarget:self action:@selector(takeButtonAction) forControlEvents:UIControlEventTouchUpInside];
     if([_photos count]>=MAX_PHOTO_COUNT){
         _takePicButton.enabled=NO;
@@ -125,7 +165,6 @@
     _confirmButton.frame=CGRectMake(toolbarView.bounds.size.width-20-26, 10, 40, 40);
     [_confirmButton setImage:[UIImage imageNamed:@"camera_ok_btn.png"] forState:UIControlStateNormal];
     [_confirmButton setImage:[UIImage imageNamed:@"camera_ok_btn_highlight.png"] forState:UIControlStateHighlighted];
-    [_confirmButton setImage:[UIImage imageNamed:@"camera_ok_btn_highligh.png"] forState:UIControlStateHighlighted];
     [_confirmButton addTarget:self action:@selector(confirmAction) forControlEvents:UIControlEventTouchUpInside];
     _confirmButton.hidden=YES;
     [toolbarView addSubview:_confirmButton];
@@ -146,39 +185,107 @@
             return device;
     return nil;
 }
+//开关闪光灯
+-(void)turnFlashLight:(id)a{
+    if([_device hasFlash]){
+        BOOL on=YES;
+        if([_device flashMode]==AVCaptureFlashModeOff){
+            on=YES;
+        }else{
+            on=NO;
+        }
+        [_device lockForConfiguration:nil];
+        if(on){
+            [_device setFlashMode:AVCaptureFlashModeOn];
+            [_flashlightButton setImage:[UIImage imageNamed:@"camera_flash_off.png"] forState:UIControlStateNormal];
+        }else{
+            [_device setFlashMode:AVCaptureFlashModeOff];
+            [_flashlightButton setImage:[UIImage imageNamed:@"camera_flash_on.png"] forState:UIControlStateNormal];
+        }
+        [_device unlockForConfiguration];
+    }
+}
+
 //切换前后摄像头
 -(void)swapFrontAndBackCameras{
+    
+    AVCaptureSession *oldSession=_session;
+    
+    AVCaptureDevice *newCamera=nil;
     NSArray *inputs = _session.inputs;
     for ( AVCaptureDeviceInput *input in inputs ) {
         AVCaptureDevice *device = input.device;
         if ( [device hasMediaType:AVMediaTypeVideo] ) {
             AVCaptureDevicePosition position = device.position;
-            AVCaptureDevice *newCamera = nil;
-            AVCaptureDeviceInput *newInput = nil;
             
             if (position == AVCaptureDevicePositionFront)
                 newCamera = [self cameraWithPosition:AVCaptureDevicePositionBack];
             else
                 newCamera = [self cameraWithPosition:AVCaptureDevicePositionFront];
-            newInput = [AVCaptureDeviceInput deviceInputWithDevice:newCamera error:nil];
-            
-            // beginConfiguration ensures that pending changes are not applied immediately
-            [_session beginConfiguration];
-            
-            [_session removeInput:input];
-            [_session addInput:newInput];
-            
-            [_session commitConfiguration];
             
             break;
         }
     }
-}
+    
+    
+    
+    AVCaptureSession *newSession=[[AVCaptureSession alloc] init];
+    [newSession setSessionPreset:AVCaptureSessionPresetPhoto];
+    
+    AVCaptureDeviceInput *input=[AVCaptureDeviceInput deviceInputWithDevice:newCamera error:nil];
+    [newSession addInput:input];
+    
+    AVCaptureStillImageOutput *newOutput=[[AVCaptureStillImageOutput alloc] init];
+    NSDictionary *outputSettings=[[NSDictionary alloc] initWithObjectsAndKeys:AVVideoCodecJPEG,AVVideoCodecKey, nil];
+    [_output setOutputSettings:outputSettings];
+    
+    [newSession addOutput:newOutput];
+    
+    
+    
+    UIView *newMonitorView=[[UIView alloc]initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT)];
+    newMonitorView.backgroundColor=[UIColor grayColor];
+    AVCaptureVideoPreviewLayer *newMonitorLayer=[AVCaptureVideoPreviewLayer layerWithSession:newSession];
+    newMonitorLayer.frame=newMonitorView.bounds;
+    newMonitorLayer.videoGravity=AVLayerVideoGravityResizeAspectFill;
+    [newMonitorView.layer addSublayer:newMonitorLayer];
+    //闪光灯按钮
+    [_flashlightButton removeFromSuperview];
+    if([newCamera hasFlash]){
+        [newMonitorView addSubview:_flashlightButton];
+        if([newCamera flashMode]==AVCaptureFlashModeOff){
+            [_flashlightButton setTitle:@"打开" forState:UIControlStateNormal];
+        }else{
+            [_flashlightButton setTitle:@"关闭" forState:UIControlStateNormal];
+        }
+    }
+    
+    //动画开始
+    [UIView beginAnimations:@"Flip" context:nil];
+    [UIView setAnimationDuration:0.5f];
+    [UIView setAnimationCurve:UIViewAnimationCurveEaseInOut];
+    [UIView transitionWithView:_cameraContainerView duration:2.0f options:UIViewAnimationOptionTransitionFlipFromLeft animations:^{
+        [_cameraSwapButton removeFromSuperview];
+        [_monitorView removeFromSuperview];
+        
+        [_cameraContainerView addSubview:newMonitorView];
+        
+        [newMonitorView addSubview:_cameraSwapButton];
+        _monitorView=newMonitorView;
+        _monitorLayer=newMonitorLayer;
+        _device=newCamera;
+        _session=newSession;
+        _output=newOutput;
+        [_session startRunning];
+        
+        
+    } completion:^(BOOL r){
+        [oldSession stopRunning];
+    }];
+    [UIView commitAnimations];
 
-- (void)commitCameraSwap{
     
 }
-
 
 #pragma mark Button Click Process
 - (void) backButtonAction{
@@ -202,9 +309,6 @@
 }
 
 - (void)takeButtonAction{
-    //test
-    //[self swapFrontAndBackCameras];
-    //return;
     
     AVCaptureConnection *conn=nil;
     for(AVCaptureConnection *c in _output.connections){
@@ -231,7 +335,7 @@
             NSString *timeString = [NSString stringWithFormat:@"%.0f", a];//转为字符型
             
             NSString *imgName=[timeString stringByAppendingString:@".jpg"];
-            NSString *path=[[XHFSelectPhoto localCacheFolder] stringByAppendingPathComponent:imgName];
+            NSString *path=[[XHFMultiPhotoPicker localCacheFolder] stringByAppendingPathComponent:imgName];
             [UIImageJPEGRepresentation([UIImage imageWithData:imageData], 0) writeToFile:path atomically:YES];
             
             XHFSelectPhoto *photo=[[XHFSelectPhoto alloc]init];

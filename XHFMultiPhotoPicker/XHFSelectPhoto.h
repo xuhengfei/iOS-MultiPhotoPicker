@@ -23,9 +23,7 @@
 //可选参数，用于反向查找相册的图片
 @property (nonatomic,strong) NSURL *ref;
 
-+ (void)setLocalCacheFolder:(NSString *)path;
 
-+ (NSString *)localCacheFolder;
 
 + (UIImage *)loadLocalThumbnail:(NSString *)localpath;
 

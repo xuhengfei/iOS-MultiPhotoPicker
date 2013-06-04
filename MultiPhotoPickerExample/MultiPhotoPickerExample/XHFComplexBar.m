@@ -8,7 +8,7 @@
 
 #import "XHFComplexBar.h"
 #import "XHFSelectPhoto.h"
-#import "XHFPhotoPicker.h"
+#import "XHFMultiPhotoPicker.h"
 
 @implementation XHFComplexBar{
     UIViewController *_vc;
@@ -52,7 +52,7 @@
 }
 
 -(void)addButtonClick{
-    [XHFPhotoPicker showWithType:USER_SELECT InitPhotos:_photos ViewController:_vc ResultBlock:^(NSArray *photos){
+    [XHFMultiPhotoPicker pickWithType:USER_SELECT InitPhotos:_photos ViewController:_vc ResultBlock:^(NSArray *photos){
         _photos=[[NSMutableArray alloc]initWithArray:photos];
         [self refreshButtons];
         [self persistentPhotosToLocal];

@@ -14,6 +14,8 @@
 //当点击删除按钮时会触发的block
 @property (nonatomic,copy) XHFPhotoBlock removeBlock;
 
+@property (nonatomic,copy) void(^BrowseBlock)(int index);
+
 - (void) redrawWithSelectPhotos:(NSArray *)photos;
 
 @end

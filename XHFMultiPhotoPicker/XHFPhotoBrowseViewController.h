@@ -7,7 +7,14 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "XHFSelectPhoto.h"
+#import "XHFMultiPhotoPicker.h"
 
-@interface XHFPhotoBrowseViewController : UIViewController
+@interface XHFPhotoBrowseViewController : UIViewController<UIScrollViewDelegate>
+
+
+@property (nonatomic,readonly) UIScrollView *scrollView;
+
+-(id)initWithPhotos:(NSArray *)photos andIndex:(int)index andReturnBlock:(XHFResultBlock)block;
 
 @end

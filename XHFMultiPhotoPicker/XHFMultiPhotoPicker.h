@@ -26,8 +26,17 @@ typedef enum {
     USER_SELECT
 }SOURCE_TYPE;
 
-@interface XHFPhotoPicker : NSObject
+
+
+@interface XHFMultiPhotoPicker : NSObject
+
++ (void)setLocalCacheFolder:(NSString *)path;
+
++ (NSString *)localCacheFolder;
 
 +(void)pickWithType:(SOURCE_TYPE)type InitPhotos:(NSArray *)photos ViewController:(UIViewController *)vc ResultBlock:(XHFResultBlock)resultBlock;
+
+//清除存放临时图片文件的文件夹
++(void)clearLocalImages;
 
 @end

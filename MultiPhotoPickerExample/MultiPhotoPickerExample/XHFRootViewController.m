@@ -7,9 +7,9 @@
 //
 
 #import "XHFRootViewController.h"
-#import "XHFPhotoPicker.h"
 #import "XHFDemoBar.h"
 #import "XHFComplexViewController.h"
+#import "XHFMultiPhotoPicker.h"
 
 @interface XHFRootViewController ()
 
@@ -66,15 +66,15 @@
 }
 
 -(void)btn1Click{
-    [XHFPhotoPicker showWithType:ALBUM InitPhotos:self.photos ViewController: self ResultBlock:_resultBlock];
+    [XHFMultiPhotoPicker pickWithType:ALBUM InitPhotos:self.photos ViewController: self ResultBlock:_resultBlock];
 }
 
 -(void)btn2Click{
-    [XHFPhotoPicker showWithType:CAMERA InitPhotos:self.photos ViewController:self ResultBlock:_resultBlock];
+    [XHFMultiPhotoPicker pickWithType:CAMERA InitPhotos:self.photos ViewController:self ResultBlock:_resultBlock];
 }
 
 -(void)btn3Click{
-    [XHFPhotoPicker showWithType:USER_SELECT InitPhotos:self.photos ViewController:self ResultBlock:_resultBlock];
+    [XHFMultiPhotoPicker pickWithType:USER_SELECT InitPhotos:self.photos ViewController:self ResultBlock:_resultBlock];
 }
 
 -(void)advanceClick{

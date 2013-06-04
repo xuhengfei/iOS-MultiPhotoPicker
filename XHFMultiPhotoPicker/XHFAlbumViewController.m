@@ -11,6 +11,8 @@
 #import "XHFThumbnailBar.h"
 #import "XHFAlbumViewController.h"
 #import "XHFMultiPhotoPicker.h"
+#import "XHFPhotoBrowseViewController.h"
+#import "UIImage+FixOrientation.h"
 
 @implementation XHFAlbumViewController{
     @public
@@ -171,22 +173,40 @@
     [super viewDidLoad];
     UIBarButtonItem *done=[[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemDone target:self action:@selector(doneAction:)];
     self.navigationItem.rightBarButtonItem=done;
+    self.view.backgroundColor=[UIColor grayColor];
     
     //配置TableView
     _tableView=[[UITableView alloc]initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height)];
+    _tableView.backgroundColor=[UIColor clearColor];
     _tableView.autoresizingMask=UIViewAutoresizingFlexibleBottomMargin|UIViewAutoresizingFlexibleHeight;
     [_tableView setSeparatorColor:[UIColor clearColor]];
     _tableView.dataSource=self;
     _tableView.delegate=self;
     [self.view addSubview:_tableView];
     
+    //toolbar
+    UIImageView *toolbarView=[[UIImageView alloc]initWithFrame:CGRectMake(0, SCREEN_HEIGHT-58-44, SCREEN_WIDTH, 58)];
+    toolbarView.image=[[UIImage imageNamed:@"camera_toolBar_bg.png"] stretchableImageWithLeftCapWidth:0 topCapHeight:0];
+    //toolbarGBView.backgroundColor=[UIColor colorWithPatternImage:[UIImage imageNamed:@"camera_toolBar_pure_bg.png"]];
+    [self.view addSubview:toolbarView];
+    
     //配置5个小图区域
-    CGRect thumb=CGRectMake(0, SCREEN_HEIGHT-58-50-1.0f, SCREEN_WIDTH, 50);
+    CGRect thumb=CGRectMake(0, SCREEN_HEIGHT-50-44-1.0f, SCREEN_WIDTH, 50);
     _thumbnailBar=[[XHFThumbnailBar alloc]initWithFrame:thumb];
-    __weak UITableView *tv=_tableView;
+    __block UITableView *tv=_tableView;
+    __block XHFAlbumViewController *blockNav=(XHFAlbumViewController *)self.navigationController;
+    __block XHFThumbnailBar *blockThumbnailBar=_thumbnailBar;
     _thumbnailBar.removeBlock=[^{
         [tv reloadData];
     } copy];
+    _thumbnailBar.BrowseBlock=^(int index){
+        XHFPhotoBrowseViewController *c=[[XHFPhotoBrowseViewController alloc]initWithPhotos:blockNav->_photos andIndex:index andReturnBlock:^(NSArray *photos){
+            blockNav->_photos=[[NSMutableArray alloc]initWithArray:photos];
+            [blockThumbnailBar redrawWithSelectPhotos:photos];
+            [tv reloadData];
+        }];
+        [blockNav presentViewController:c animated:YES completion:nil];
+    };
     XHFAlbumViewController *nav=(XHFAlbumViewController *)self.navigationController;
     [_thumbnailBar redrawWithSelectPhotos:nav->_photos];
     [self.view addSubview:_thumbnailBar];
@@ -225,9 +245,13 @@
                 NSString *timeString = [NSString stringWithFormat:@"%.0f", a];//转为字符型
                 
                 NSString *imgName=[timeString stringByAppendingString:@".jpg"];
-                NSString *path=[[XHFSelectPhoto localCacheFolder] stringByAppendingPathComponent:imgName];
+                NSString *path=[[XHFMultiPhotoPicker localCacheFolder] stringByAppendingPathComponent:imgName];
                 
-                [UIImageJPEGRepresentation([UIImage imageWithCGImage:item.asset.defaultRepresentation.fullResolutionImage], 0) writeToFile:path atomically:YES];
+                //根据图像的方向，进行旋转
+                ALAssetRepresentation *rep= item.asset.defaultRepresentation;
+                UIImage *image=[UIImage imageWithCGImage:rep.fullResolutionImage scale:rep.scale orientation:rep.orientation];
+                
+                [UIImageJPEGRepresentation([image fixOrientation], 0) writeToFile:path atomically:YES];
                 XHFSelectPhoto *photo=[[XHFSelectPhoto alloc]init];
                 photo.localPath=path;
                 photo.thumbnail=[UIImage imageWithCGImage:item.asset.thumbnail];

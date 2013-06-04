@@ -5,23 +5,14 @@
 //  Created by 周方 on 13-5-29.
 //  Copyright (c) 2013年 周方. All rights reserved.
 //
-
+#import <Foundation/Foundation.h>
 #import "XHFSelectPhoto.h"
 
-static NSString *localCacheFolder;
+
 
 @implementation XHFSelectPhoto
 
-+ (void)setLocalCacheFolder:(NSString *)path{
-    localCacheFolder=path;
-}
 
-+ (NSString *)localCacheFolder{
-    if(localCacheFolder==nil){
-        return [[NSBundle mainBundle] bundlePath];
-    }
-    return localCacheFolder;
-}
 
 + (UIImage *)loadLocalThumbnail:(NSString *)localpath{
     if([[NSFileManager defaultManager] fileExistsAtPath:localpath]){

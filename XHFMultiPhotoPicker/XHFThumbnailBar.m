@@ -8,6 +8,7 @@
 
 #import "XHFThumbnailBar.h"
 #import "XHFSelectPhoto.h"
+#import "XHFPhotoBrowseViewController.h"
 #import <QuartzCore/QuartzCore.h>
 
 @implementation XHFThumbnailBar{
@@ -23,6 +24,7 @@
     return self;
 }
 
+
 - (void)drawRect:(CGRect)rect{
     for(UIView *view in [self subviews]){
         if([view isKindOfClass:[UIView class]]){
@@ -33,6 +35,9 @@
         CGRect rectV=CGRectMake(11.3*(i+1)+(50*i), 0, 50, 50);
         UIView *rectView=[[UIView alloc]initWithFrame:rectV];
         rectView.tag=i;
+        UITapGestureRecognizer *browseTap=[[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(tapBrowse:)];
+        [rectView addGestureRecognizer:browseTap];
+        rectView.userInteractionEnabled=YES;
         
         UIImageView *thumbnailView=[[UIImageView alloc]initWithFrame:CGRectMake(0, 0, 50, 50)];
         thumbnailView.backgroundColor=[UIColor colorWithRed:255 green:255 blue:255 alpha:0.5];
@@ -66,6 +71,15 @@
         [self addSubview:rectView];
         
         
+    }
+}
+
+-(void)tapBrowse:(UITapGestureRecognizer *)sender{
+    int index=sender.view.tag;
+    if([_photos count]>index){
+        if(self.BrowseBlock!=nil){
+            self.BrowseBlock(index);
+        }
     }
 }
 
