@@ -9,22 +9,27 @@ Quick Start
 2.在工程中引入AssetsLibrary.framework AVFoundation.framework  
 3.编写代码，示例如下： 
 ```objective-c
-//XHFPhotoPicker 中的核心静态方法
-//type可选为从相册获取，从摄像头获取，或者交由用户选择
-//vc表示当前的UIViewController
-//ResultBlock为选择完成后的回调Block，返回一个数组，内含XHFSelectPhoto对象
-+(void)pickWithType:(SOURCE_TYPE)type InitPhotos:(NSArray *)photos ViewController:(UIViewController *)vc ResultBlock:(XHFResultBlock)resultBlock;  
-//从相册多选照片
-[XHFPhotoPicker pickWithType:ALBUM InitPhotos:self.photos ViewController: self ResultBlock:_resultBlock];
-//从摄像头获取
-[XHFPhotoPicker pickWithType:CAMERA InitPhotos:self.photos ViewController:self ResultBlock:_resultBlock];
-//交由用户选择
-[XHFPhotoPicker pickWithType:USER_SELECT InitPhotos:self.photos ViewController:self ResultBlock:_resultBlock];
 
-//在使用之前最好先设置一下图片的临时存放路径
-[XHFPhotoPicker setLocalCacheFolder:@"path"];
-//使用完后，清除图片文件夹
-[XHFPhotoPicker clearLocalImages];
+-(void)viewDidLoad{
+  //设置临时文件夹，用来保存用户选择的图片(也可以不设置，有默认值)
+  [XHFMultiPhotoPicker setLocalCacheFolder:@"path"];
+  //弹出照片选择组件，有4个参数，分别是：
+  //Type:USER_SELECT 表示用户自己来选择拍照还是相册 (也可以使用其他2个参数：ALBUM  CAMERA)
+  //InitPhotos:self.photos 用户已经选中的照片(传入nil表示还没有选中的图片)
+  //ViewController: 当前的UIViewController
+  //ResultBlock: 用户选择完成后，返回选中的照片数组
+  [XHFMultiPhotoPicker pickWithType:USER_SELECT InitPhotos:nil ViewController:self ResultBlock:^(NSArray *photos){
+    //返回用户选中的照片Array
+    for(XHFSelectPhoto *p in photos){
+      NSLog(@"photo local path:%@",p.localPath);
+    }
+    //do something
+    //清除临时照片文件
+    [XHFMultiPhotoPicker clearLocalImages];
+  }];
+  
+}
+
 
 ```
 
