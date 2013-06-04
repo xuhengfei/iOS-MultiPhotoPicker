@@ -3,6 +3,10 @@ iOS-MultiPhotoPicker
 
 iPhone上的多图拾取器，同时支持从相册勾选和摄像头拍摄  
 
+<img src="http://xuhengfei.com/assets/images/multiphotopicker/snapshot1.jpg" width="320px" height="480px"/>
+&nbsp;&nbsp;
+<img src="http://xuhengfei.com/assets/images/multiphotopicker/snapshot2.jpg" width="320px" height="480px"/>
+
 Quick Start  
 
 1.导入XHFMultiPhotoPicker目录下的所有文件  
