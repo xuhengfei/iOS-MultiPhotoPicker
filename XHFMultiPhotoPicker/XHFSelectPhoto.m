@@ -10,9 +10,32 @@
 
 
 
-@implementation XHFSelectPhoto
+@implementation XHFSelectPhoto{
+    NSMutableArray *_notifyArray;
+}
 
+- (void)addNotifyListener:(PhotoNotifyBlock)block{
+    [_notifyArray addObject:block];
+}
 
+- (void)removeNotifyListener:(PhotoNotifyBlock)block{
+    [_notifyArray removeObject:block];
+}
+
+- (void)notify{
+    NSArray *array=[[NSArray alloc]initWithArray:_notifyArray];
+    for(PhotoNotifyBlock block in array){
+        if(block(self)){
+            [_notifyArray removeObject:block];
+        }
+    }
+}
+
+-(id)init{
+    self=[super init];
+    _notifyArray=[[NSMutableArray alloc]init];
+    return self;
+}
 
 + (UIImage *)loadLocalThumbnail:(NSString *)localpath{
     if([[NSFileManager defaultManager] fileExistsAtPath:localpath]){

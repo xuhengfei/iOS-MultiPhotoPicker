@@ -9,6 +9,8 @@
 #import <Foundation/Foundation.h>
 #import "XHFSelectPhoto.h"
 
+@class XHFSelectPhoto;
+
 typedef void (^XHFBlock) ();
 
 typedef void (^XHFResultBlock)(NSArray *);

@@ -93,7 +93,7 @@
         [_device setFlashMode:AVCaptureFlashModeOff];
         [_device unlockForConfiguration];
         [_cameraContainerView addSubview:_flashlightButton];
-        [_flashlightButton setImage:[UIImage imageNamed:@"camera_flash_on.png"] forState:UIControlStateNormal];
+        [_flashlightButton setImage:[UIImage imageNamed:@"camera_flash_off.png"] forState:UIControlStateNormal];
     }
     
     //前后摄像头切换按钮
@@ -197,10 +197,10 @@
         [_device lockForConfiguration:nil];
         if(on){
             [_device setFlashMode:AVCaptureFlashModeOn];
-            [_flashlightButton setImage:[UIImage imageNamed:@"camera_flash_off.png"] forState:UIControlStateNormal];
+            [_flashlightButton setImage:[UIImage imageNamed:@"camera_flash_on.png"] forState:UIControlStateNormal];
         }else{
             [_device setFlashMode:AVCaptureFlashModeOff];
-            [_flashlightButton setImage:[UIImage imageNamed:@"camera_flash_on.png"] forState:UIControlStateNormal];
+            [_flashlightButton setImage:[UIImage imageNamed:@"camera_flash_off.png"] forState:UIControlStateNormal];
         }
         [_device unlockForConfiguration];
     }

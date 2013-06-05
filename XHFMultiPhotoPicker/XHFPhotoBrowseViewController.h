@@ -10,7 +10,7 @@
 #import "XHFSelectPhoto.h"
 #import "XHFMultiPhotoPicker.h"
 
-@interface XHFPhotoBrowseViewController : UIViewController<UIScrollViewDelegate>
+@interface XHFPhotoBrowseViewController : UIViewController<UIScrollViewDelegate,UIAlertViewDelegate>
 
 
 @property (nonatomic,readonly) UIScrollView *scrollView;

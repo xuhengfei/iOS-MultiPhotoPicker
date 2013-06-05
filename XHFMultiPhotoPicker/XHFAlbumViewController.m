@@ -240,25 +240,30 @@
     cell.clickBlock=^(XHFMultiSelectItem *item){
         if([nav->_photos count]<MAX_PHOTO_COUNT){
             if(!item.isSelected){
-                NSDate* dat = [NSDate dateWithTimeIntervalSinceNow:0];
-                NSTimeInterval a=[dat timeIntervalSince1970]*1000;
-                NSString *timeString = [NSString stringWithFormat:@"%.0f", a];//转为字符型
-                
-                NSString *imgName=[timeString stringByAppendingString:@".jpg"];
-                NSString *path=[[XHFMultiPhotoPicker localCacheFolder] stringByAppendingPathComponent:imgName];
-                
-                //根据图像的方向，进行旋转
-                ALAssetRepresentation *rep= item.asset.defaultRepresentation;
-                UIImage *image=[UIImage imageWithCGImage:rep.fullResolutionImage scale:rep.scale orientation:rep.orientation];
-                
-                [UIImageJPEGRepresentation([image fixOrientation], 0) writeToFile:path atomically:YES];
                 XHFSelectPhoto *photo=[[XHFSelectPhoto alloc]init];
-                photo.localPath=path;
                 photo.thumbnail=[UIImage imageWithCGImage:item.asset.thumbnail];
                 photo.ref=item.asset.defaultRepresentation.url;
                 [nav->_photos addObject:photo];
                 [item makeSelect:YES];
                 [_thumbnailBar redrawWithSelectPhotos:[[NSArray alloc]initWithArray:nav->_photos]];
+                
+                dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+                    NSDate* dat = [NSDate dateWithTimeIntervalSinceNow:0];
+                    NSTimeInterval a=[dat timeIntervalSince1970]*1000;
+                    NSString *timeString = [NSString stringWithFormat:@"%.0f", a];//转为字符型
+                    
+                    NSString *imgName=[timeString stringByAppendingString:@".jpg"];
+                    NSString *path=[[XHFMultiPhotoPicker localCacheFolder] stringByAppendingPathComponent:imgName];
+                    
+                    //根据图像的方向，进行旋转
+                    ALAssetRepresentation *rep= item.asset.defaultRepresentation;
+                    UIImage *image=[UIImage imageWithCGImage:rep.fullResolutionImage scale:rep.scale orientation:rep.orientation];
+                    
+                    [UIImageJPEGRepresentation([image fixOrientation], 0) writeToFile:path atomically:YES];
+                    photo.localPath=path;
+                    [photo notify];
+                });
+                
 
             }
 

@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
-
+#import "XHFMultiPhotoPicker.h"
 
 
 @interface XHFSelectPhoto : NSObject
@@ -23,7 +23,11 @@
 //可选参数，用于反向查找相册的图片
 @property (nonatomic,strong) NSURL *ref;
 
+typedef BOOL (^PhotoNotifyBlock)(XHFSelectPhoto *p);
 
+-(void)addNotifyListener:(PhotoNotifyBlock) block;
+-(void)removeNotifyListener:(PhotoNotifyBlock)block;
+-(void)notify;
 
 + (UIImage *)loadLocalThumbnail:(NSString *)localpath;
 
