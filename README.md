@@ -1,5 +1,34 @@
 iOS-MultiPhotoPicker
 ====================
+A Multi Photo Picker on iPhone,support pick photos from album and camera  
+
+<img src="http://xuhengfei.com/assets/images/multiphotopicker/snapshot1.jpg" width="320px" height="480px"/>
+&nbsp;&nbsp;
+<img src="http://xuhengfei.com/assets/images/multiphotopicker/snapshot2.jpg" width="320px" height="480px"/>
+
+Quick Start  
+
+1.import all files in dir: XHFMultiPhotoPicker  
+2.import framework include: AssetsLibrary.framework AVFoundation.framework  
+3.code,for example:  
+```objective-c
+  //set temp folder, save photos user select here (not required, it have default folder)  
+  [XHFMultiPhotoPicker setLocalCacheFolder:@"path"];
+  
+  [XHFMultiPhotoPicker pickWithType:USER_SELECT InitPhotos:nil ViewController:self ResultBlock:^(NSArray *photos){
+    //return user select photos
+    for(XHFSelectPhoto *p in photos){
+      NSLog(@"photo local path:%@",p.localPath);
+    }
+    //do something here
+    //clear folder after work done
+    [XHFMultiPhotoPicker clearLocalImages];
+  }];
+```
+
+Here is a demo project in source code 
+
+***
 
 iPhone上的多图拾取器，同时支持从相册勾选和摄像头拍摄  
 
