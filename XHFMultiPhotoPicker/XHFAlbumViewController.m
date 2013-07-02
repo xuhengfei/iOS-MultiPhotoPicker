@@ -193,9 +193,9 @@
     //配置5个小图区域
     CGRect thumb=CGRectMake(0, SCREEN_HEIGHT-50-44-1.0f, SCREEN_WIDTH, 50);
     _thumbnailBar=[[XHFThumbnailBar alloc]initWithFrame:thumb];
-    __block UITableView *tv=_tableView;
-    __block XHFAlbumViewController *blockNav=(XHFAlbumViewController *)self.navigationController;
-    __block XHFThumbnailBar *blockThumbnailBar=_thumbnailBar;
+    __block __unsafe_unretained UITableView *tv=_tableView;
+    __block __unsafe_unretained XHFAlbumViewController *blockNav=(XHFAlbumViewController *)self.navigationController;
+    __block __unsafe_unretained XHFThumbnailBar *blockThumbnailBar=_thumbnailBar;
     _thumbnailBar.removeBlock=[^{
         [tv reloadData];
     } copy];
@@ -236,6 +236,7 @@
     }else{
         cell.items=[self itemsForRowAtIndexPath:indexPath];
     }
+    __block __unsafe_unretained XHFThumbnailBar *weakThumbnailBar=_thumbnailBar;
     __unsafe_unretained XHFAlbumViewController *nav=(XHFAlbumViewController *)self.navigationController;
     cell.clickBlock=^(XHFMultiSelectItem *item){
         if([nav->_photos count]<MAX_PHOTO_COUNT){
@@ -245,7 +246,7 @@
                 photo.ref=item.asset.defaultRepresentation.url;
                 [nav->_photos addObject:photo];
                 [item makeSelect:YES];
-                [_thumbnailBar redrawWithSelectPhotos:[[NSArray alloc]initWithArray:nav->_photos]];
+                [weakThumbnailBar redrawWithSelectPhotos:[[NSArray alloc]initWithArray:nav->_photos]];
                 
                 dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
                     NSDate* dat = [NSDate dateWithTimeIntervalSinceNow:0];

@@ -57,7 +57,7 @@ static NSString *localCacheFolder;
         object.photos=photos;
         object.resultBlock=resultBlock;
         UIActionSheet *sheet=[[UIActionSheet alloc] initWithTitle:@"选择照片来源" delegate:object cancelButtonTitle:@"取消" destructiveButtonTitle:@"拍照" otherButtonTitles:@"相册", nil];
-        [sheet showInView:vc.view];
+        [sheet showInView:vc.view.window];
     }else if(type==ALBUM){
         XHFAlbumViewController *album=[[XHFAlbumViewController alloc]initWithInitPhotos:photos];
         album.resultBlock=^(NSArray *photos){
@@ -93,12 +93,18 @@ static NSString *localCacheFolder;
 
 + (NSString *)localCacheFolder{
     if(localCacheFolder==nil){
-        NSString *defaultPath=[[[NSBundle mainBundle]bundlePath]stringByAppendingString:@"/xhfimages"];
-        if(![[NSFileManager defaultManager]fileExistsAtPath:defaultPath]){
-            BOOL r=[[NSFileManager defaultManager]createDirectoryAtPath:defaultPath withIntermediateDirectories:YES attributes:nil error:nil];
-            NSAssert(r, @"创建图片临时存放目录失败");
+        NSString *TempDirectory = NSTemporaryDirectory();
+        TempDirectory = [TempDirectory stringByAppendingString:@"/temp_images"];
+        
+        if(![[NSFileManager defaultManager]fileExistsAtPath:TempDirectory])
+        {
+            BOOL r = [[NSFileManager defaultManager]createDirectoryAtPath:TempDirectory withIntermediateDirectories:YES attributes:nil error:nil];
+            if(r)
+            {
+                NSLog(@"创建图片临时存放目录失败: %@", TempDirectory);
+            }
         }
-        localCacheFolder=defaultPath;
+        localCacheFolder = TempDirectory;
     }
     return localCacheFolder;
 }
